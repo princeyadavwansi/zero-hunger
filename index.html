@@ -33,6 +33,24 @@ section{padding:65px 7%;max-width:1250px;margin:auto}.section-title{text-align:c
 .feedback-list{display:grid;gap:10px;margin-top:15px}.feedback{padding:13px 15px;background:#fff;border:1px solid #e1e8df;border-radius:10px}.stars{color:#e2a928;letter-spacing:2px}
 footer{background:#294d2e;color:#fff;text-align:center;padding:30px 7%;margin-top:30px}footer p{opacity:.85;font-size:13px;margin-top:5px}
 @media(max-width:800px){nav{flex-direction:column;gap:8px}nav div:last-child{display:flex;flex-wrap:wrap;justify-content:center;gap:5px}nav a{margin:0 5px}.hero{grid-template-columns:1fr;padding:52px 7%}h1{font-size:41px}.cards,.actions,.board,.process{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}section{padding:52px 7%}}
+
+/* Share a Meal interactive motion */
+@keyframes floatMeal{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-10px) rotate(1deg)}}
+@keyframes pulseRing{0%{box-shadow:0 0 0 0 #5c994e33}70%{box-shadow:0 0 0 18px #5c994e00}100%{box-shadow:0 0 0 0 #5c994e00}}
+@keyframes revealUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes drift{0%{transform:translateX(0)}50%{transform:translateX(9px)}100%{transform:translateX(0)}}
+.hero-card{animation:floatMeal 4s ease-in-out infinite}
+.hero-card .emoji{animation:drift 3s ease-in-out infinite}
+.btn{transition:transform .2s ease,box-shadow .2s ease;background:linear-gradient(135deg,#4c8b4d,#69a958);box-shadow:0 5px 14px #4c8b4d26}
+.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 9px 20px #4c8b4d40}
+.card,.action,.step,.stat{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover,.action:hover,.step:hover,.stat:hover{transform:translateY(-6px);box-shadow:0 12px 28px #203a2018;border-color:#b9d5b3}
+.action .big{display:inline-block;animation:drift 3.5s ease-in-out infinite}
+.badge{animation:pulseRing 2.4s infinite}
+.reveal{opacity:0;transform:translateY(24px)}
+.reveal.visible{animation:revealUp .65s ease forwards}
+.progress-bar{transition:width 1.4s ease}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
@@ -223,6 +241,8 @@ footer{background:#294d2e;color:#fff;text-align:center;padding:30px 7%;margin-to
 </footer>
 
 <script>
+const revealObserver=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}})},{threshold:.12});
+document.querySelectorAll('section,.hero-card').forEach(el=>{el.classList.add('reveal');revealObserver.observe(el)});
 const get=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}};
 const set=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
 let counts=get('zhCounts',{requests:0,donations:0,volunteers:0,surveys:0});
