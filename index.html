@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zero Hunger | Design Thinking Project</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#243126;background:#f7faf5;line-height:1.6}
+nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #e2e9df;padding:14px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:800;color:#3d7c3d}
+nav a{text-decoration:none;color:#344434;margin-left:20px;font-size:14px}
+.hero{padding:85px 8%;background:linear-gradient(135deg,#e8f6df,#fff7d6);display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.badge{display:inline-block;background:#fff;border:1px solid #cfe2c8;padding:7px 13px;border-radius:20px;color:#4d7947;font-size:13px;font-weight:700;margin-bottom:18px}
+h1{font-size:54px;line-height:1.05;margin-bottom:20px;color:#25452a}
+.hero p{font-size:18px;max-width:650px;color:#566257}
+.btn{display:inline-block;margin-top:25px;background:#4f8d45;color:white;text-decoration:none;padding:12px 20px;border-radius:9px;font-weight:bold}
+.hero-card{background:#fff;padding:30px;border-radius:22px;box-shadow:0 12px 35px #33552218}
+.hero-card .emoji{font-size:75px;text-align:center;margin-bottom:15px}
+.hero-card h3{font-size:22px;color:#315b35;margin-bottom:8px}
+section{padding:70px 8%;max-width:1250px;margin:auto}
+.section-title{text-align:center;margin-bottom:40px}
+.section-title h2{font-size:35px;color:#294d2e}
+.section-title p{color:#687269;margin-top:7px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;padding:25px;border-radius:16px;border:1px solid #e1e9df;box-shadow:0 5px 20px #203a2010}
+.card h3{margin:12px 0 8px;color:#345f39}
+.icon{font-size:34px}
+.highlight{background:#edf7e9;border-left:5px solid #5a974d;padding:22px;border-radius:10px;margin-top:25px}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.step{background:white;border:1px solid #dfe8dc;border-radius:14px;padding:22px;text-align:center;position:relative}
+.step.active{border:2px solid #5a974d}
+.step small{display:inline-block;background:#edf7e9;color:#4e8148;padding:4px 9px;border-radius:15px;margin-bottom:10px}
+.progress-wrap{background:#e3eadf;border-radius:20px;height:16px;overflow:hidden;margin:20px 0}
+.progress-bar{height:100%;width:55%;background:#5c994e;border-radius:20px}
+.todo{display:flex;gap:15px;align-items:flex-start;margin:14px 0;padding:15px;background:white;border-radius:12px;border:1px solid #e2e9df}
+.todo .done{color:#4d9147;font-size:20px}
+.todo .pending{color:#d69a28;font-size:20px}
+footer{background:#294d2e;color:#fff;text-align:center;padding:30px 8%;margin-top:30px}
+footer p{opacity:.85;font-size:14px}
+@media(max-width:800px){
+ nav{flex-direction:column;gap:10px}nav a{margin:0 7px}
+ .hero{grid-template-columns:1fr;padding:55px 7%}h1{font-size:42px}
+ .cards,.process{grid-template-columns:1fr}
+ section{padding:55px 7%}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">🌱 Zero Hunger</div>
+  <div>
+    <a href="#problem">Problem</a>
+    <a href="#research">Research</a>
+    <a href="#define">Define</a>
+    <a href="#ideas">Ideas</a>
+    <a href="#progress">Progress</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <span class="badge">DESIGN THINKING PROJECT • SDG 2</span>
+    <h1>Building a future with <span style="color:#5c994e">Zero Hunger.</span></h1>
+    <p>Understanding the real causes of hunger and exploring simple, practical solutions through the Design Thinking process.</p>
+    <a class="btn" href="#problem">Explore Our Work ↓</a>
+  </div>
+  <div class="hero-card">
+    <div class="emoji">🥗🌾</div>
+    <h3>Our Project Goal</h3>
+    <p>To understand people's food-related challenges and develop ideas that can improve access to safe, nutritious and affordable food.</p>
+  </div>
+</header>
+
+<section id="problem">
+  <div class="section-title">
+    <h2>1. The Problem</h2>
+    <p>What are we trying to understand?</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="icon">🍽️</div><h3>Food Insecurity</h3><p>Some families do not have regular access to enough nutritious food.</p></div>
+    <div class="card"><div class="icon">💰</div><h3>Affordability</h3><p>Low income can make healthy food difficult to buy regularly.</p></div>
+    <div class="card"><div class="icon">♻️</div><h3>Food Waste</h3><p>Food can be wasted while other people face shortages.</p></div>
+  </div>
+  <div class="highlight"><b>Initial problem statement:</b> “How might we help people get regular access to affordable and nutritious food while reducing unnecessary food waste?”</div>
+</section>
+
+<section id="research">
+  <div class="section-title">
+    <h2>2. User Research</h2>
+    <p>Early findings from our research stage</p>
+  </div>
+  <div class="cards">
+    <div class="card"><h3>👨‍👩‍👧 Families</h3><p>Need affordable food and stable access to basic nutrition.</p></div>
+    <div class="card"><h3>👨‍🌾 Farmers</h3><p>Need better ways to connect produce with consumers and reduce losses.</p></div>
+    <div class="card"><h3>🎓 Students</h3><p>Can contribute through awareness, food-sharing and community activities.</p></div>
+  </div>
+  <div class="highlight"><b>Research status:</b> Initial user needs have been identified. Interviews/survey data will be added to the website in the next stage.</div>
+</section>
+
+<section id="define">
+  <div class="section-title">
+    <h2>3. Define</h2>
+    <p>Turning observations into a clear design challenge</p>
+  </div>
+  <div class="card">
+    <h3>Our Design Challenge</h3>
+    <p>People facing food insecurity need a simple and accessible way to find affordable nutritious food and connect with available community resources.</p>
+    <div class="highlight"><b>How Might We?</b><br>How might we make nutritious food more accessible while encouraging communities to reduce food waste?</div>
+  </div>
+</section>
+
+<section id="ideas">
+  <div class="section-title">
+    <h2>4. Ideate</h2>
+    <p>Possible solutions we are exploring</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="icon">📱</div><h3>Food Connect</h3><p>A platform to connect extra food from homes, messes and events with people who need it.</p></div>
+    <div class="card"><div class="icon">🏪</div><h3>Local Food Support</h3><p>Map nearby low-cost food resources, community kitchens and support centres.</p></div>
+    <div class="card"><div class="icon">🌾</div><h3>Farm-to-Community</h3><p>Explore ways to connect local farmers with communities and reduce food loss.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>5. Design Thinking Process</h2>
+    <p>Our project follows the Double Diamond approach</p>
+  </div>
+  <div class="process">
+    <div class="step active"><small>01</small><h3>Discover</h3><p>Research users and understand the problem.</p></div>
+    <div class="step active"><small>02</small><h3>Define</h3><p>Identify the main user need.</p></div>
+    <div class="step active"><small>03</small><h3>Develop</h3><p>Create and compare possible ideas.</p></div>
+    <div class="step"><small>04</small><h3>Deliver</h3><p>Prototype, test and improve the solution.</p></div>
+  </div>
+</section>
+
+<section id="progress">
+  <div class="section-title">
+    <h2>Project Progress</h2>
+    <p>Current website development status</p>
+  </div>
+  <div class="card">
+    <h3>Website completion: 55%</h3>
+    <div class="progress-wrap"><div class="progress-bar"></div></div>
+    <div class="todo"><span class="done">✓</span><div><b>Completed:</b> Problem identification and basic research</div></div>
+    <div class="todo"><span class="done">✓</span><div><b>Completed:</b> Define stage and initial problem statement</div></div>
+    <div class="todo"><span class="done">✓</span><div><b>Completed:</b> Initial solution ideas</div></div>
+    <div class="todo"><span class="pending">◐</span><div><b>In progress:</b> User survey and interview results</div></div>
+    <div class="todo"><span class="pending">◐</span><div><b>In progress:</b> Prototype and testing section</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>Coming Next</h2>
+    <p>Work planned for the next stage</p>
+  </div>
+  <div class="cards">
+    <div class="card"><h3>📊 Add Survey Data</h3><p>We will collect responses and show the findings using simple charts.</p></div>
+    <div class="card"><h3>🧩 Build Prototype</h3><p>The selected idea will be converted into a basic clickable prototype.</p></div>
+    <div class="card"><h3>🧪 Test & Improve</h3><p>User feedback will be used to identify improvements.</p></div>
+  </div>
+</section>
+
+<footer>
+  <h3>Zero Hunger • Design Thinking Project</h3>
+  <p>SDG 2 — End hunger, achieve food security and improved nutrition.</p>
+  <p style="margin-top:8px">Prototype version • Work in Progress</p>
+</footer>
+</body>
+</html>
