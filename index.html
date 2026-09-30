@@ -2,173 +2,237 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zero Hunger | Design Thinking Project</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Zero Hunger | Community Food Prototype</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:#243126;background:#f7faf5;line-height:1.6}
-nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #e2e9df;padding:14px 7%;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:22px;font-weight:800;color:#3d7c3d}
-nav a{text-decoration:none;color:#344434;margin-left:20px;font-size:14px}
-.hero{padding:85px 8%;background:linear-gradient(135deg,#e8f6df,#fff7d6);display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
-.badge{display:inline-block;background:#fff;border:1px solid #cfe2c8;padding:7px 13px;border-radius:20px;color:#4d7947;font-size:13px;font-weight:700;margin-bottom:18px}
-h1{font-size:54px;line-height:1.05;margin-bottom:20px;color:#25452a}
-.hero p{font-size:18px;max-width:650px;color:#566257}
-.btn{display:inline-block;margin-top:25px;background:#4f8d45;color:white;text-decoration:none;padding:12px 20px;border-radius:9px;font-weight:bold}
-.hero-card{background:#fff;padding:30px;border-radius:22px;box-shadow:0 12px 35px #33552218}
-.hero-card .emoji{font-size:75px;text-align:center;margin-bottom:15px}
-.hero-card h3{font-size:22px;color:#315b35;margin-bottom:8px}
-section{padding:70px 8%;max-width:1250px;margin:auto}
-.section-title{text-align:center;margin-bottom:40px}
-.section-title h2{font-size:35px;color:#294d2e}
-.section-title p{color:#687269;margin-top:7px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:white;padding:25px;border-radius:16px;border:1px solid #e1e9df;box-shadow:0 5px 20px #203a2010}
-.card h3{margin:12px 0 8px;color:#345f39}
-.icon{font-size:34px}
-.highlight{background:#edf7e9;border-left:5px solid #5a974d;padding:22px;border-radius:10px;margin-top:25px}
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.step{background:white;border:1px solid #dfe8dc;border-radius:14px;padding:22px;text-align:center;position:relative}
-.step.active{border:2px solid #5a974d}
-.step small{display:inline-block;background:#edf7e9;color:#4e8148;padding:4px 9px;border-radius:15px;margin-bottom:10px}
-.progress-wrap{background:#e3eadf;border-radius:20px;height:16px;overflow:hidden;margin:20px 0}
-.progress-bar{height:100%;width:55%;background:#5c994e;border-radius:20px}
-.todo{display:flex;gap:15px;align-items:flex-start;margin:14px 0;padding:15px;background:white;border-radius:12px;border:1px solid #e2e9df}
-.todo .done{color:#4d9147;font-size:20px}
-.todo .pending{color:#d69a28;font-size:20px}
-footer{background:#294d2e;color:#fff;text-align:center;padding:30px 8%;margin-top:30px}
-footer p{opacity:.85;font-size:14px}
-@media(max-width:800px){
- nav{flex-direction:column;gap:10px}nav a{margin:0 7px}
- .hero{grid-template-columns:1fr;padding:55px 7%}h1{font-size:42px}
- .cards,.process{grid-template-columns:1fr}
- section{padding:55px 7%}
-}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#26352a;background:#f7faf6;line-height:1.55}
+nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #dfe8dc;padding:13px 6%;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-weight:800;font-size:21px;color:#36733c}.logo span{font-size:15px;color:#778078;font-weight:500;margin-left:6px}
+nav a{text-decoration:none;color:#3d4b40;margin-left:16px;font-size:13px;font-weight:600}
+.hero{padding:72px 7%;background:linear-gradient(135deg,#e8f5e3,#fff8dd);display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+.badge{display:inline-block;background:#fff;border:1px solid #cfe1ca;padding:6px 12px;border-radius:20px;color:#4c7d4f;font-size:12px;font-weight:700;margin-bottom:17px}
+h1{font-size:52px;line-height:1.06;color:#24472b;margin-bottom:18px}.hero p{font-size:18px;color:#5d685f;max-width:690px}
+.btn{display:inline-block;margin-top:22px;background:#4c8b4d;color:#fff;text-decoration:none;padding:12px 19px;border-radius:9px;font-weight:700;border:0;cursor:pointer}
+.hero-card,.card{background:#fff;border:1px solid #e0e9de;border-radius:17px;box-shadow:0 7px 25px #203a2010}
+.hero-card{padding:28px}.hero-card .emoji{text-align:center;font-size:64px;margin-bottom:12px}
+section{padding:65px 7%;max-width:1250px;margin:auto}.section-title{text-align:center;margin-bottom:32px}
+.section-title h2{font-size:32px;color:#294e30}.section-title p{color:#707a72;margin-top:5px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{padding:23px}.card h3{color:#355f3a;margin:9px 0 7px}.icon{font-size:32px}
+.highlight{background:#eef7eb;border-left:5px solid #5b974f;padding:18px;border-radius:9px;margin-top:22px}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{background:#fff;border:1px solid #dfe8dc;border-radius:14px;padding:20px;text-align:center}.step.active{border:2px solid #67a45a}
+.step small{display:inline-block;background:#edf7e9;color:#4e8148;padding:4px 9px;border-radius:15px;margin-bottom:9px}
+.progress-wrap{background:#e3eadf;border-radius:20px;height:15px;overflow:hidden;margin:16px 0}.progress-bar{height:100%;width:55%;background:#5c994e}
+.todo{display:flex;gap:12px;align-items:flex-start;margin:11px 0;padding:13px;background:#fff;border:1px solid #e2e9df;border-radius:10px}.done{color:#4d9147;font-weight:bold}.pending{color:#d18f20;font-weight:bold}
+.actions{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}.action{padding:24px;border-radius:16px;background:#fff;border:1px solid #dfe8dc;text-align:center}.action .big{font-size:38px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-bottom:12px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:5px;color:#405044}.field input,.field select,.field textarea{width:100%;padding:11px;border:1px solid #ccd9ca;border-radius:8px;font:inherit;background:#fff}.field textarea{min-height:90px;resize:vertical}
+.notice{padding:13px 16px;background:#fff8df;border:1px solid #f0df9d;border-radius:9px;color:#675522;margin-bottom:17px;font-size:13px}
+.result{display:none;margin-top:15px;padding:15px;background:#edf8eb;border:1px solid #cfe4c9;border-radius:10px;color:#315d36}.result.show{display:block}
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.stat{background:#fff;border:1px solid #e0e8de;border-radius:13px;padding:19px}.stat b{font-size:28px;color:#3e7f43;display:block}.status{display:inline-block;padding:4px 9px;border-radius:12px;font-size:11px;font-weight:700;background:#edf7e9;color:#47784b}
+.survey-options{display:grid;grid-template-columns:1fr 1fr;gap:8px}.option{padding:10px;border:1px solid #d7e1d4;border-radius:8px;background:#fff;cursor:pointer}.option input{margin-right:7px}
+.feedback-list{display:grid;gap:10px;margin-top:15px}.feedback{padding:13px 15px;background:#fff;border:1px solid #e1e8df;border-radius:10px}.stars{color:#e2a928;letter-spacing:2px}
+footer{background:#294d2e;color:#fff;text-align:center;padding:30px 7%;margin-top:30px}footer p{opacity:.85;font-size:13px;margin-top:5px}
+@media(max-width:800px){nav{flex-direction:column;gap:8px}nav div:last-child{display:flex;flex-wrap:wrap;justify-content:center;gap:5px}nav a{margin:0 5px}.hero{grid-template-columns:1fr;padding:52px 7%}h1{font-size:41px}.cards,.actions,.board,.process{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}section{padding:52px 7%}}
 </style>
 </head>
 <body>
-
 <nav>
-  <div class="logo">🌱 Zero Hunger</div>
-  <div>
-    <a href="#problem">Problem</a>
-    <a href="#research">Research</a>
-    <a href="#define">Define</a>
-    <a href="#ideas">Ideas</a>
-    <a href="#progress">Progress</a>
-  </div>
+<div class="logo">🌱 Zero Hunger <span>Community Prototype</span></div>
+<div>
+<a href="#help">Get Help</a><a href="#donate">Donate</a><a href="#volunteer">Volunteer</a><a href="#survey">Survey</a><a href="#progress">Progress</a>
+</div>
 </nav>
 
 <header class="hero">
-  <div>
-    <span class="badge">DESIGN THINKING PROJECT • SDG 2</span>
-    <h1>Building a future with <span style="color:#5c994e">Zero Hunger.</span></h1>
-    <p>Understanding the real causes of hunger and exploring simple, practical solutions through the Design Thinking process.</p>
-    <a class="btn" href="#problem">Explore Our Work ↓</a>
-  </div>
-  <div class="hero-card">
-    <div class="emoji">🥗🌾</div>
-    <h3>Our Project Goal</h3>
-    <p>To understand people's food-related challenges and develop ideas that can improve access to safe, nutritious and affordable food.</p>
-  </div>
+<div>
+<span class="badge">SDG 2 • DESIGN THINKING • WORK IN PROGRESS</span>
+<h1>Building a future with <span style="color:#5c994e">Zero Hunger.</span></h1>
+<p>We are exploring a simple community platform where people can ask for food support, share extra food and volunteer locally.</p>
+<a class="btn" href="#help">Try the prototype ↓</a>
+</div>
+<div class="hero-card">
+<div class="emoji">🥗🤝🌾</div>
+<h3>Prototype status</h3>
+<p>This is an early working prototype. The team is currently testing forms, collecting user feedback and deciding which features should be developed next.</p>
+<div class="highlight"><b>Current stage:</b> Develop → early prototype testing</div>
+</div>
 </header>
 
 <section id="problem">
-  <div class="section-title">
-    <h2>1. The Problem</h2>
-    <p>What are we trying to understand?</p>
-  </div>
-  <div class="cards">
-    <div class="card"><div class="icon">🍽️</div><h3>Food Insecurity</h3><p>Some families do not have regular access to enough nutritious food.</p></div>
-    <div class="card"><div class="icon">💰</div><h3>Affordability</h3><p>Low income can make healthy food difficult to buy regularly.</p></div>
-    <div class="card"><div class="icon">♻️</div><h3>Food Waste</h3><p>Food can be wasted while other people face shortages.</p></div>
-  </div>
-  <div class="highlight"><b>Initial problem statement:</b> “How might we help people get regular access to affordable and nutritious food while reducing unnecessary food waste?”</div>
+<div class="section-title"><h2>1. Understand the Problem</h2><p>What we are trying to solve</p></div>
+<div class="cards">
+<div class="card"><div class="icon">🍽️</div><h3>Food insecurity</h3><p>Some people do not have regular access to enough safe and nutritious food.</p></div>
+<div class="card"><div class="icon">💰</div><h3>Affordability</h3><p>Healthy food can become difficult to afford when household budgets are limited.</p></div>
+<div class="card"><div class="icon">♻️</div><h3>Food waste</h3><p>Extra food from homes, events and institutions can be wasted instead of being shared.</p></div>
+</div>
+<div class="highlight"><b>Design challenge:</b> How might we make food support easier to find while helping communities share safe surplus food?</div>
 </section>
 
 <section id="research">
-  <div class="section-title">
-    <h2>2. User Research</h2>
-    <p>Early findings from our research stage</p>
-  </div>
-  <div class="cards">
-    <div class="card"><h3>👨‍👩‍👧 Families</h3><p>Need affordable food and stable access to basic nutrition.</p></div>
-    <div class="card"><h3>👨‍🌾 Farmers</h3><p>Need better ways to connect produce with consumers and reduce losses.</p></div>
-    <div class="card"><h3>🎓 Students</h3><p>Can contribute through awareness, food-sharing and community activities.</p></div>
-  </div>
-  <div class="highlight"><b>Research status:</b> Initial user needs have been identified. Interviews/survey data will be added to the website in the next stage.</div>
+<div class="section-title"><h2>2. User Research</h2><p>Research has started — more responses will be added as we test the idea.</p></div>
+<div class="cards">
+<div class="card"><h3>👨‍👩‍👧 Families</h3><p>Need affordable food and reliable access to basic nutrition.</p></div>
+<div class="card"><h3>🎓 Students</h3><p>Can help through awareness, volunteering and responsible food sharing.</p></div>
+<div class="card"><h3>👨‍🌾 Farmers / sellers</h3><p>May have produce or food that needs a better route to local communities.</p></div>
+</div>
+<div class="highlight"><b>Research status:</b> Initial user needs identified. The survey below is now being used to collect feedback before the next prototype version.</div>
 </section>
 
-<section id="define">
-  <div class="section-title">
-    <h2>3. Define</h2>
-    <p>Turning observations into a clear design challenge</p>
-  </div>
-  <div class="card">
-    <h3>Our Design Challenge</h3>
-    <p>People facing food insecurity need a simple and accessible way to find affordable nutritious food and connect with available community resources.</p>
-    <div class="highlight"><b>How Might We?</b><br>How might we make nutritious food more accessible while encouraging communities to reduce food waste?</div>
-  </div>
+<section id="actions">
+<div class="section-title"><h2>3. Community Actions</h2><p>Three user journeys we are designing around</p></div>
+<div class="actions">
+<div class="action"><div class="big">🍱</div><h3>Need Food?</h3><p>Tell us what support is needed. This prototype creates a request ID.</p><a class="btn" href="#help">Request support</a></div>
+<div class="action"><div class="big">🥘</div><h3>Have Extra Food?</h3><p>Share basic details so a future local matching system can connect donors and requests.</p><a class="btn" href="#donate">Offer food</a></div>
+<div class="action"><div class="big">🤝</div><h3>Want to Help?</h3><p>Register interest as a volunteer for the next testing stage.</p><a class="btn" href="#volunteer">Join us</a></div>
+</div>
+</section>
+
+<section id="help">
+<div class="section-title"><h2>Get Food Support</h2><p>Prototype form — submit a sample request to test the user flow.</p></div>
+<div class="card">
+<div class="notice">🔒 <b>Prototype only:</b> Do not enter sensitive personal information. This demo stores entries only in this browser and is not a real emergency food service.</div>
+<form id="helpForm">
+<div class="form-grid">
+<div class="field"><label>Name / nickname</label><input id="helpName" required placeholder="e.g. Rahul"></div>
+<div class="field"><label>Area</label><input id="helpArea" required placeholder="e.g. Chandigarh"></div>
+<div class="field"><label>People needing food</label><select id="helpPeople"><option>1</option><option>2–3</option><option>4–6</option><option>7+</option></select></div>
+<div class="field"><label>Food need</label><select id="helpFood"><option>Cooked meal</option><option>Groceries</option><option>Nutritious food</option><option>Other</option></select></div>
+</div>
+<button class="btn" type="submit">Submit support request</button>
+</form>
+<div id="helpResult" class="result"></div>
+</div>
+</section>
+
+<section id="donate">
+<div class="section-title"><h2>Donate / Share Extra Food</h2><p>A simple donor flow for our first prototype.</p></div>
+<div class="card">
+<div class="notice">🥘 We are testing what information a donor would be comfortable providing. The current version does not arrange a real pickup.</div>
+<form id="donateForm">
+<div class="form-grid">
+<div class="field"><label>Donor name</label><input id="donorName" required placeholder="e.g. Hostel mess / Student"></div>
+<div class="field"><label>Area</label><input id="donorArea" required placeholder="e.g. Chandigarh"></div>
+<div class="field"><label>Food type</label><select id="donorFood"><option>Cooked meals</option><option>Groceries</option><option>Fruits / vegetables</option><option>Packaged food</option></select></div>
+<div class="field"><label>Approx. quantity</label><input id="donorQty" required placeholder="e.g. 10 meals"></div>
+</div>
+<button class="btn" type="submit">Add donation to prototype</button>
+</form>
+<div id="donateResult" class="result"></div>
+</div>
+</section>
+
+<section id="volunteer">
+<div class="section-title"><h2>Become a Volunteer</h2><p>Help us test and improve the community idea.</p></div>
+<div class="card">
+<form id="volunteerForm">
+<div class="form-grid">
+<div class="field"><label>Name</label><input id="volName" required></div>
+<div class="field"><label>Area</label><input id="volArea" required placeholder="City / campus"></div>
+<div class="field"><label>Interested in</label><select id="volRole"><option>Food collection</option><option>Community awareness</option><option>Survey / research</option><option>Website testing</option></select></div>
+<div class="field"><label>Availability</label><select id="volTime"><option>Weekdays</option><option>Weekends</option><option>Both</option></select></div>
+</div>
+<button class="btn" type="submit">Join volunteer list</button>
+</form>
+<div id="volResult" class="result"></div>
+</div>
+</section>
+
+<section id="board">
+<div class="section-title"><h2>Prototype Community Board</h2><p>Local matching dashboard concept — currently using test data.</p></div>
+<div class="board">
+<div class="stat"><span>Food requests</span><b id="requestCount">3</b><small>sample + browser submissions</small></div>
+<div class="stat"><span>Food donations</span><b id="donationCount">2</b><small>sample + browser submissions</small></div>
+<div class="stat"><span>Volunteer interest</span><b id="volunteerCount">5</b><small>sample + browser submissions</small></div>
+</div>
+<div class="card" style="margin-top:18px">
+<h3>Example activity</h3>
+<p style="margin:8px 0">🟢 Chandigarh — 10 meal donation <span class="status">Prototype listing</span></p>
+<p style="margin:8px 0">🟡 Chandigarh — family food request <span class="status">Needs matching</span></p>
+<p style="margin:8px 0">🔵 Campus — volunteer interest <span class="status">Testing</span></p>
+</div>
+</section>
+
+<section id="survey">
+<div class="section-title"><h2>4. User Survey</h2><p>We are collecting feedback before finalising the solution.</p></div>
+<div class="card">
+<form id="surveyForm">
+<div class="field"><label>Have you seen food being wasted while people needed food?</label>
+<div class="survey-options"><label class="option"><input type="radio" name="waste" value="Yes" required> Yes</label><label class="option"><input type="radio" name="waste" value="No"> No</label></div></div>
+<div class="field"><label>Which feature would you use?</label>
+<select id="surveyFeature" required><option value="">Select one</option><option>Request food support</option><option>Donate extra food</option><option>Volunteer</option><option>See nearby resources</option></select></div>
+<div class="field"><label>What should we improve?</label><textarea id="surveyImprove" placeholder="Write your suggestion..."></textarea></div>
+<button class="btn" type="submit">Submit survey response</button>
+</form>
+<div id="surveyResult" class="result"></div>
+</div>
+</section>
+
+<section>
+<div class="section-title"><h2>5. Define</h2><p>Turning research into a focused user need</p></div>
+<div class="card"><h3>Problem statement</h3><p>People facing food insecurity need a simple way to discover available food support, while people with safe surplus food need an easy way to share it locally.</p><div class="highlight"><b>How Might We?</b><br>How might we connect food support, donors and volunteers through a simple community experience?</div></div>
 </section>
 
 <section id="ideas">
-  <div class="section-title">
-    <h2>4. Ideate</h2>
-    <p>Possible solutions we are exploring</p>
-  </div>
-  <div class="cards">
-    <div class="card"><div class="icon">📱</div><h3>Food Connect</h3><p>A platform to connect extra food from homes, messes and events with people who need it.</p></div>
-    <div class="card"><div class="icon">🏪</div><h3>Local Food Support</h3><p>Map nearby low-cost food resources, community kitchens and support centres.</p></div>
-    <div class="card"><div class="icon">🌾</div><h3>Farm-to-Community</h3><p>Explore ways to connect local farmers with communities and reduce food loss.</p></div>
-  </div>
+<div class="section-title"><h2>6. Develop Ideas</h2><p>Ideas being explored before the final solution is selected</p></div>
+<div class="cards">
+<div class="card"><div class="icon">📍</div><h3>Local Food Connect</h3><p>Match food requests with nearby donations and community resources.</p></div>
+<div class="card"><div class="icon">📊</div><h3>Simple Dashboard</h3><p>Show requests, donations and volunteer interest in one place.</p></div>
+<div class="card"><div class="icon">🔔</div><h3>Future Alerts</h3><p>Explore notifications when a relevant donation or support option is available.</p></div>
+</div>
 </section>
 
 <section>
-  <div class="section-title">
-    <h2>5. Design Thinking Process</h2>
-    <p>Our project follows the Double Diamond approach</p>
-  </div>
-  <div class="process">
-    <div class="step active"><small>01</small><h3>Discover</h3><p>Research users and understand the problem.</p></div>
-    <div class="step active"><small>02</small><h3>Define</h3><p>Identify the main user need.</p></div>
-    <div class="step active"><small>03</small><h3>Develop</h3><p>Create and compare possible ideas.</p></div>
-    <div class="step"><small>04</small><h3>Deliver</h3><p>Prototype, test and improve the solution.</p></div>
-  </div>
+<div class="section-title"><h2>7. Deliver & Test</h2><p>Not finished yet — this is the stage we are starting now.</p></div>
+<div class="process">
+<div class="step active"><small>01</small><h3>Discover</h3><p>Identify users, food insecurity and waste.</p></div>
+<div class="step active"><small>02</small><h3>Define</h3><p>Create the main problem statement.</p></div>
+<div class="step active"><small>03</small><h3>Develop</h3><p>Build this first working prototype.</p></div>
+<div class="step"><small>04</small><h3>Deliver</h3><p>Test with users, collect feedback and improve.</p></div>
+</div>
+<div class="highlight"><b>Current milestone:</b> First interactive prototype is live. Next step is real student/user testing and analysis of the survey responses.</div>
 </section>
 
 <section id="progress">
-  <div class="section-title">
-    <h2>Project Progress</h2>
-    <p>Current website development status</p>
-  </div>
-  <div class="card">
-    <h3>Website completion: 55%</h3>
-    <div class="progress-wrap"><div class="progress-bar"></div></div>
-    <div class="todo"><span class="done">✓</span><div><b>Completed:</b> Problem identification and basic research</div></div>
-    <div class="todo"><span class="done">✓</span><div><b>Completed:</b> Define stage and initial problem statement</div></div>
-    <div class="todo"><span class="done">✓</span><div><b>Completed:</b> Initial solution ideas</div></div>
-    <div class="todo"><span class="pending">◐</span><div><b>In progress:</b> User survey and interview results</div></div>
-    <div class="todo"><span class="pending">◐</span><div><b>In progress:</b> Prototype and testing section</div></div>
-  </div>
+<div class="section-title"><h2>Project Progress</h2><p>We have started the work — several parts are intentionally still in progress.</p></div>
+<div class="card">
+<h3>Prototype completion: 55%</h3>
+<div class="progress-wrap"><div class="progress-bar"></div></div>
+<div class="todo"><span class="done">✓</span><div><b>Completed:</b> Problem identification and initial research</div></div>
+<div class="todo"><span class="done">✓</span><div><b>Completed:</b> Define stage and problem statement</div></div>
+<div class="todo"><span class="done">✓</span><div><b>Completed:</b> First solution ideas</div></div>
+<div class="todo"><span class="done">✓</span><div><b>Completed:</b> First clickable website prototype</div></div>
+<div class="todo"><span class="pending">◐</span><div><b>In progress:</b> Student/user survey collection</div></div>
+<div class="todo"><span class="pending">◐</span><div><b>In progress:</b> Testing the user flows</div></div>
+<div class="todo"><span class="pending">◐</span><div><b>Next:</b> Analyse feedback and improve the prototype</div></div>
+</div>
 </section>
 
 <section>
-  <div class="section-title">
-    <h2>Coming Next</h2>
-    <p>Work planned for the next stage</p>
-  </div>
-  <div class="cards">
-    <div class="card"><h3>📊 Add Survey Data</h3><p>We will collect responses and show the findings using simple charts.</p></div>
-    <div class="card"><h3>🧩 Build Prototype</h3><p>The selected idea will be converted into a basic clickable prototype.</p></div>
-    <div class="card"><h3>🧪 Test & Improve</h3><p>User feedback will be used to identify improvements.</p></div>
-  </div>
+<div class="section-title"><h2>Testing Notes</h2><p>Early feedback area — this will grow as more people test the prototype.</p></div>
+<div class="feedback-list">
+<div class="feedback"><span class="stars">★★★★☆</span> <b>Early tester</b><p>“The food request flow is easy to understand.”</p></div>
+<div class="feedback"><span class="stars">★★★★★</span> <b>Early tester</b><p>“Donation and volunteer options are clear.”</p></div>
+</div>
+<div class="notice" style="margin-top:15px">These are prototype/example comments. More feedback will be added after the actual class/user testing round.</div>
 </section>
 
 <footer>
-  <h3>Zero Hunger • Design Thinking Project</h3>
-  <p>SDG 2 — End hunger, achieve food security and improved nutrition.</p>
-  <p style="margin-top:8px">Prototype version • Work in Progress</p>
+<h3>Zero Hunger • Community Food Prototype</h3>
+<p>SDG 2 — End hunger, achieve food security and improved nutrition.</p>
+<p>Early prototype • Research and testing in progress</p>
 </footer>
+
+<script>
+const get=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}};
+const set=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+let counts=get('zhCounts',{requests:0,donations:0,volunteers:0,surveys:0});
+function render(){document.getElementById('requestCount').textContent=3+counts.requests;document.getElementById('donationCount').textContent=2+counts.donations;document.getElementById('volunteerCount').textContent=5+counts.volunteers}
+function result(id,msg){const e=document.getElementById(id);e.innerHTML=msg;e.classList.add('show')}
+document.getElementById('helpForm').addEventListener('submit',e=>{e.preventDefault();counts.requests++;set('zhCounts',counts);render();const id='ZH-'+Math.floor(1000+Math.random()*9000);result('helpResult','✅ <b>Request created!</b><br>Your prototype request ID is <b>'+id+'</b>. In the future, this request could be matched with nearby food support.');e.target.reset()});
+document.getElementById('donateForm').addEventListener('submit',e=>{e.preventDefault();counts.donations++;set('zhCounts',counts);render();result('donateResult','✅ <b>Donation added to the prototype board.</b><br>Next development step: connect this listing with verified local requests.');e.target.reset()});
+document.getElementById('volunteerForm').addEventListener('submit',e=>{e.preventDefault();counts.volunteers++;set('zhCounts',counts);render();result('volResult','🤝 <b>Volunteer interest recorded!</b><br>Thank you. The next testing round can use this information to plan volunteer roles.');e.target.reset()});
+document.getElementById('surveyForm').addEventListener('submit',e=>{e.preventDefault();counts.surveys++;set('zhCounts',counts);result('surveyResult','📊 <b>Survey response saved on this browser.</b><br>Response #'+counts.surveys+' will be included in the prototype testing count.');e.target.reset()});
+render();
+</script>
 </body>
 </html>
