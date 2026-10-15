@@ -98,3 +98,12 @@ grant select, insert, update, delete on table public.listings to authenticated;
 grant insert on table public.feedback to anon, authenticated;
 grant select on table public.feedback to authenticated;
 grant select, insert, update, delete on table public.notifications to authenticated;
+
+
+-- Public, no-account prototype: allow visitors to submit pending listings.
+-- Pending submissions stay hidden from anonymous visitors; only admins can review them.
+drop policy if exists "Public can submit pending listings" on public.listings;
+create policy "Public can submit pending listings"
+on public.listings for insert to anon
+with check (status = 'Pending' and user_id is null);
+grant insert on table public.listings to anon;
