@@ -1,28 +1,53 @@
 # Share a Meal — Backend setup and troubleshooting
 
-The live frontend is configured to use the Supabase project URL and a publishable key. The publishable key is intentionally public; database access must be protected by Row Level Security (RLS). Never place a Supabase secret/service-role key in `index.html`, GitHub Pages, or any browser code.
+The GitHub Pages frontend uses the Supabase project URL and a publishable key. A publishable key is meant for browser use; database security must come from Row Level Security (RLS). Never place a Supabase secret/service-role key in `index.html`, GitHub Pages, or any browser code.
 
 ## Current architecture
+
 - GitHub Pages hosts the static website.
-- Supabase REST API stores and returns community listings and feedback.
-- Public visitors can submit listings and feedback according to the policies in `supabase-schema.sql`.
-- Public visitors cannot update/delete shared listings. The status and delete controls are hidden while the shared backend is active.
-- The History & Alerts section currently derives activity from listings. Read/unread state is local to each browser; it is not a shared notification system and does not send email, SMS, or push alerts.
+- Supabase Auth handles sign-up and sign-in.
+- Supabase REST stores food requests and feedback.
+- Signed-in users can submit listings tied to their Auth user ID.
+- A signed-in user can see their own pending requests. Visitors see only approved/completed listings on the public board.
+- Users cannot change listing status or delete shared requests. Admin users can review all requests and change status/delete through the board.
+- The History section combines the signed-in user's own database requests with local alerts. It is not an email, SMS, or push notification system.
 
-## If the website shows “Connection needs attention”
-1. Open the live site and press **Ctrl + F5** to reload the latest deployment.
-2. In Supabase, confirm the project is active and the URL matches the frontend configuration.
-3. In **Project Settings → API** (or **Connect**), confirm the publishable key belongs to this project.
-4. In **SQL Editor**, run/inspect `supabase-schema.sql`. Confirm `public.listings` and `public.feedback` exist and RLS is enabled.
-5. In **API Settings**, confirm the Data API is enabled and the `public` schema is exposed.
-6. Open browser developer tools (**F12 → Console**). If there is still an error, copy the exact message and status code. Do not share any secret/service-role key.
+## Required one-time database setup
 
-## Database policies
-The SQL file allows public reads of listings whose status is Pending, Approved, or Completed and allows public inserts only with Pending status. Feedback can be inserted publicly; feedback reading and listing updates/deletes are restricted to authenticated admin users whose JWT `app_metadata.role` is `admin`. Do not allow users to assign their own admin role.
+After deploying the code, open **Supabase Dashboard → SQL Editor**, paste the entire current `supabase-schema.sql` file from this repository, and run it. This migration adds `user_id`, changes the listing policies, and removes anonymous listing submissions. Existing older rows without a user ID are not visible as private user requests; admins can still review them.
 
-## Deployment and verification
-- GitHub Pages deployment may take a short time after a commit.
-- Test submission and reload using two separate browsers/devices to verify shared persistence.
-- Do not enter real people's sensitive information in this student prototype.
-- Real food distribution requires verified partners, food-safety procedures, moderation, and a safe way to contact participants.
-- Shared notification records, real-time updates, and email/SMS/push delivery require additional policies, client subscriptions, and/or a trusted notification service. They are not currently implemented.
+If the SQL migration has not been run, sign-in may work but submitting a request will fail because the new `user_id` column and policies will not be active.
+
+## Create an admin account
+
+1. Open the live website, go to **Account**, and create an account with an email you control.
+2. If email confirmation is enabled, confirm the email and sign in.
+3. In Supabase **Authentication → Users**, find that account and copy its exact email.
+4. Open **SQL Editor** and run the statement below after replacing the email with your own admin email:
+
+```sql
+update auth.users
+set raw_app_meta_data = coalesce(raw_app_meta_data, '{}'::jsonb) || '{"role":"admin"}'::jsonb
+where email = 'YOUR_ADMIN_EMAIL';
+```
+
+5. Sign out and sign in again so the browser receives a fresh token. The Account area should show **Admin access enabled**. The admin can then review pending requests on the Community Board and approve, complete, reject, or delete them.
+
+Only trusted project owners should receive the admin role. Do not set the role through a user-editable profile field or browser code.
+
+## If the website shows a connection or authentication error
+
+1. Open the live site and press **Ctrl + F5** to load the latest deployment.
+2. In Supabase, confirm the project is active and the URL/key belong to this project.
+3. In **Authentication → Providers**, make sure Email sign-in is enabled. Check whether email confirmation is required.
+4. In **API Settings**, confirm the Data API is enabled and the `public` schema is exposed.
+5. Confirm the complete `supabase-schema.sql` file was run successfully.
+6. Open browser developer tools (**F12 → Console**) and note the exact error/status. Never share a secret/service-role key.
+
+## Privacy and limitations
+
+- Pending requests are private to the account that created them and project admins. Approved/completed listings become visible on the public board, including their name/nickname and area; use demo details unless public sharing is intended.
+- Existing anonymous rows cannot be assigned to an account automatically. They have a null `user_id`; admins can review them.
+- Account session tokens are stored in the browser's local storage, as with many static Supabase Auth demos. Sign out on shared computers.
+- Feedback can still be submitted publicly. Feedback reading is admin-only.
+- This is a college prototype, not an emergency food service. Real food distribution requires verified partners, food-safety procedures, moderation, and a safe contact process.
