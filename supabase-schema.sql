@@ -76,3 +76,10 @@ with check ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');
 create index if not exists listings_created_at_idx on public.listings (created_at desc);
 create index if not exists listings_status_idx on public.listings (status);
 create index if not exists notifications_created_at_idx on public.notifications (created_at desc);
+
+-- Table privileges are separate from RLS policies. These grants allow the
+-- public frontend roles to reach the tables; RLS still limits which rows/actions
+-- are allowed by the policies above.
+grant select, insert on table public.listings to anon, authenticated;
+grant insert on table public.feedback to anon, authenticated;
+
