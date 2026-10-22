@@ -23,6 +23,12 @@
 .links .navcta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:10px;box-shadow:0 6px 16px rgba(39,83,58,.15);font-size:.83rem;font-weight:750}
 .links .navcta:hover{background:var(--green-dark);color:#fff;transform:translateY(-1px);box-shadow:0 9px 20px rgba(39,83,58,.2)}
 .nav{border-bottom-color:rgba(39,83,58,.12)}
+/* Keep the full navigation and Share Food button inside the viewport */
+.navinner{width:min(1600px,96%);margin-inline:auto;gap:clamp(10px,1.2vw,20px)}
+.links{gap:clamp(6px,.7vw,13px);min-width:0}
+.links a{font-size:clamp(.69rem,.72vw,.81rem)}
+.links .navcta{flex-shrink:0;padding:10px 13px;font-size:clamp(.72rem,.75vw,.83rem)}
+@media(max-width:1250px) and (min-width:701px){.navinner{width:98%;gap:9px}.brand{gap:8px}.brand small{font-size:.64rem}.links{gap:7px}.links a{font-size:.68rem}.links .navcta{padding:9px 10px;font-size:.7rem}}
 @media(max-width:1100px) and (min-width:701px){.navinner{gap:12px}.brand{font-size:1rem}.brandmark{width:40px;height:40px}.links{gap:9px}.links a{font-size:.74rem}.links .navcta{padding:10px 12px;font-size:.76rem}}
 @media(max-width:700px){.navinner{min-height:68px}.brandmark{width:42px;height:42px;border-radius:11px}.links{gap:5px}.links a{white-space:normal}.links a:not(.navcta)::after{display:none}.links .navcta{justify-content:center;margin-top:5px;padding:12px}}
 
