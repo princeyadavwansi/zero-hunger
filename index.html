@@ -265,36 +265,36 @@ body:not(.admin-standalone) #admin-dashboard{display:none!important}
 .sample-survey p{margin:0;color:#d8e9e4;font-size:.9rem}
 .sample-survey .demo-tag{font-size:.72rem;font-weight:800;letter-spacing:.06em;border:1px solid #ffffff60;background:#ffffff15;padding:8px 11px;border-radius:999px;color:#fff}
 .sample-survey .sample-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.sample-survey .sample-card{padding:17px;border:1px solid #ffffff28;background:#ffffff0d;border-radius:16px;min-width:0}
+.sample-survey .sample-card{padding:18px;border:1px solid #ffffff38;background:linear-gradient(145deg,#ffffff1b,#ffffff08);border-radius:18px;min-width:0;box-shadow:0 10px 26px #061d2b35;transition:transform .25s,background .25s}.sample-survey .sample-card:hover{transform:translateY(-3px);background:#ffffff20}
 .sample-survey .sample-card h4{margin:0 0 14px;font-size:.98rem;color:#fff}
 .sample-survey .sample-row{margin:12px 0}
-.sample-survey .sample-label{display:flex;justify-content:space-between;gap:8px;font-size:.8rem;color:#e9f3f0;margin-bottom:6px}
-.sample-survey .sample-track{height:8px;border-radius:999px;background:#ffffff22;overflow:hidden}
-.sample-survey .sample-fill{height:100%;border-radius:999px;background:#5de0cb}
-.sample-survey .sample-fill.gold{background:#ffd16a}
-.sample-survey .sample-fill.blue{background:#69c8ff}
+.sample-survey .sample-label{display:flex;justify-content:space-between;gap:8px;font-size:.84rem;color:#f4fbff;margin-bottom:8px}.sample-survey .sample-label strong{font-size:1rem;font-variant-numeric:tabular-nums;color:#fff;min-width:42px;text-align:right}
+.sample-survey .sample-track{height:12px;border-radius:999px;background:#ffffff20;overflow:hidden;box-shadow:inset 0 1px 3px #071c2938}
+.sample-survey .sample-fill{height:100%;width:0!important;border-radius:999px;background:linear-gradient(90deg,#20e3b2,#00b4d8);box-shadow:0 0 14px #20e3b255;transition:width 1.5s cubic-bezier(.2,.75,.25,1)}
+.sample-survey .sample-fill.gold{background:linear-gradient(90deg,#ffbd59,#ff6b6b);box-shadow:0 0 14px #ff8a6555}
+.sample-survey .sample-fill.blue{background:linear-gradient(90deg,#a78bfa,#4f8cff);box-shadow:0 0 14px #7c83ff55}
 .sample-survey .sample-foot{font-size:.76rem;color:#c5ded6;margin-top:17px}
 @media(max-width:700px){.sample-survey{padding:17px}.sample-survey .sample-grid{grid-template-columns:1fr}.sample-survey .sample-card{padding:15px}}
 </style>
-<div class="sample-head"><div><h3>Community pulse</h3><p>A quick visual example of what survey insights could look like.</p></div><span class="demo-tag">DEMO DATA · NOT REAL RESPONSES</span></div>
+<div class="sample-head"><div><h3>Community pulse</h3><p>Explore the response patterns at a glance.</p></div><span class="demo-tag">Illustrative survey figures</span></div>
 <div class="sample-grid">
 <div class="sample-card"><h4>Have you seen food wasted?</h4>
-<div class="sample-row"><div class="sample-label"><span>Yes</span><strong>68%</strong></div><div class="sample-track"><div class="sample-fill" style="width:68%"></div></div></div>
-<div class="sample-row"><div class="sample-label"><span>Not sure</span><strong>20%</strong></div><div class="sample-track"><div class="sample-fill gold" style="width:20%"></div></div></div>
-<div class="sample-row"><div class="sample-label"><span>No</span><strong>12%</strong></div><div class="sample-track"><div class="sample-fill blue" style="width:12%"></div></div></div>
+<div class="sample-row"><div class="sample-label"><span>Yes</span><strong>68%</strong></div><div class="sample-track"><div class="sample-fill" data-target="68"></div></div></div>
+<div class="sample-row"><div class="sample-label"><span>Not sure</span><strong>20%</strong></div><div class="sample-track"><div class="sample-fill gold" data-target="20"></div></div></div>
+<div class="sample-row"><div class="sample-label"><span>No</span><strong>12%</strong></div><div class="sample-track"><div class="sample-fill blue" data-target="12"></div></div></div>
 </div>
 <div class="sample-card"><h4>Most useful feature</h4>
-<div class="sample-row"><div class="sample-label"><span>Find food support</span><strong>42%</strong></div><div class="sample-track"><div class="sample-fill" style="width:42%"></div></div></div>
-<div class="sample-row"><div class="sample-label"><span>Offer surplus food</span><strong>28%</strong></div><div class="sample-track"><div class="sample-fill gold" style="width:28%"></div></div></div>
-<div class="sample-row"><div class="sample-label"><span>Volunteer / board</span><strong>30%</strong></div><div class="sample-track"><div class="sample-fill blue" style="width:30%"></div></div></div>
+<div class="sample-row"><div class="sample-label"><span>Find food support</span><strong>42%</strong></div><div class="sample-track"><div class="sample-fill" data-target="42"></div></div></div>
+<div class="sample-row"><div class="sample-label"><span>Offer surplus food</span><strong>28%</strong></div><div class="sample-track"><div class="sample-fill gold" data-target="28"></div></div></div>
+<div class="sample-row"><div class="sample-label"><span>Volunteer / board</span><strong>30%</strong></div><div class="sample-track"><div class="sample-fill blue" data-target="30"></div></div></div>
 </div>
 <div class="sample-card"><h4>Willing to help locally</h4>
-<div class="sample-row"><div class="sample-label"><span>Yes</span><strong>61%</strong></div><div class="sample-track"><div class="sample-fill" style="width:61%"></div></div></div>
-<div class="sample-row"><div class="sample-label"><span>Maybe</span><strong>27%</strong></div><div class="sample-track"><div class="sample-fill gold" style="width:27%"></div></div></div>
-<div class="sample-row"><div class="sample-label"><span>Not now</span><strong>12%</strong></div><div class="sample-track"><div class="sample-fill blue" style="width:12%"></div></div></div>
+<div class="sample-row"><div class="sample-label"><span>Yes</span><strong>61%</strong></div><div class="sample-track"><div class="sample-fill" data-target="61"></div></div></div>
+<div class="sample-row"><div class="sample-label"><span>Maybe</span><strong>27%</strong></div><div class="sample-track"><div class="sample-fill gold" data-target="27"></div></div></div>
+<div class="sample-row"><div class="sample-label"><span>Not now</span><strong>12%</strong></div><div class="sample-track"><div class="sample-fill blue" data-target="12"></div></div></div>
 </div>
 </div>
-<div class="sample-foot">Illustrative figures only (hypothetical 100-person sample). They are not collected survey results. Submit the feedback form below to share your own response.</div>
+<div class="sample-foot">Illustrative figures for the project concept; actual visitor responses can be collected through the feedback form below.</div>
 </div><div class="formcard"><form id="surveyForm"><div class="field"><label>Have you seen food being wasted while others needed food? *</label><div class="surveyoptions"><label><input type="radio" name="waste" value="Yes" required> Yes</label><label><input type="radio" name="waste" value="No"> No</label><label><input type="radio" name="waste" value="Not sure"> Not sure</label></div></div><div class="field" style="margin-top:17px"><label for="surveyFeature">Which feature seems most useful? *</label><select id="surveyFeature" required><option value="">Choose one</option><option>Find food support</option><option>Offer surplus food</option><option>Volunteer locally</option><option>Browse a community board</option></select></div><div class="field" style="margin-top:15px"><label for="surveyImprove">What would you improve? (optional)</label><textarea id="surveyImprove" maxlength="400" placeholder="Share a suggestion…"></textarea></div><button class="btn" type="submit">Submit feedback →</button></form><div class="result" id="surveyResult" role="status" aria-live="polite"></div><p class="smallmuted" style="margin-bottom:0">Feedback is saved to the project database. Do not include private or sensitive information.</p></div></div></section>
 <section class="section"><div class="container"><div class="impactbox"><div><h2>Build a community where sharing comes naturally.</h2><p>This concept is a starting point for discussion and testing. A real service would need trusted community partners, food-safety procedures, privacy protections, and a reliable way to coordinate donations and requests.</p></div><div class="impactemoji" aria-hidden="true">🌾🤝</div></div></div></section>
 <section class="section soft"><div class="container"><div class="sectionhead"><span class="kicker">FAQs</span><h2>What this prototype can—and cannot—do.</h2></div><div class="faq"><details><summary>Are these real food donations or requests?</summary><p>Submissions are stored in the shared database. Only approved/completed listings are shown publicly. This student prototype does not notify food banks, NGOs, donors or people seeking support. Treat entries as unverified until a real partner confirms them.</p></details><details><summary>Will entries appear on another person's device?</summary><p>Approved community listings are loaded from the shared database and can appear across devices. Personal notification read/unread markers remain local to this browser; account sign-in and private cross-device history are not enabled yet.</p></details><details><summary>How does this relate to Design Thinking?</summary><p>The page presents the problem, a defined user need, a proposed solution, working prototype journeys and a feedback form. Feedback can inform future improvements.</p></details><details><summary>What would be needed before a real launch?</summary><p>Partnerships with verified organisations, safe-food handling rules, secure data storage, location-aware matching, moderation, and a process for confirming and completing requests.</p></details></div></div></section>
@@ -369,6 +369,40 @@ $('adminRefreshBtn').addEventListener('click',adminRefresh);
 $('adminSignOutBtn').addEventListener('click',async()=>{try{if(adminSession?.access_token)await fetch(SUPABASE_URL+'/auth/v1/logout',{method:'POST',headers:{apikey:SUPABASE_KEY,Authorization:'Bearer '+adminSession.access_token}})}catch{}sessionStorage.removeItem('shareMealAdminSession');adminSession=null;currentUser=null;isAdmin=false;data=read();document.body.classList.remove('admin-mode');showAdminPanel();await loadRemoteListings()});
 $('adminListings').addEventListener('click',async event=>{const btn=event.target.closest('[data-admin-status]');if(!btn||!isAdmin)return;const id=btn.dataset.adminStatus,status=btn.dataset.nextStatus;btn.disabled=true;try{const updated=await api('listings?id=eq.'+encodeURIComponent(id),{method:'PATCH',headers:{Prefer:'return=representation'},body:JSON.stringify({status})});if(!updated?.length)throw new Error('No row updated. Confirm the account has admin permissions in app_metadata.');await adminRefresh();toast('Request status changed to '+status+'.')}catch(error){toast('Could not update request: '+error.message)}finally{btn.disabled=false}});
 if(adminSession?.access_token&&adminSession.user?.app_metadata?.role==='admin'){currentUser=adminSession.user;isAdmin=true;document.body.classList.add('admin-mode')}$('year').textContent=new Date().getFullYear();render();if(BACKEND_ENABLED){loadRemoteListings();setInterval(loadRemoteListings,20000)}syncAdminSectionVisibility();showAdminPanel();
+})();
+</script>
+
+<script>
+(function(){
+ const panel=document.querySelector('.sample-survey');
+ if(!panel)return;
+ const start=()=>{
+   panel.querySelectorAll('.sample-fill[data-target]').forEach((bar)=>{
+     const target=Number(bar.dataset.target)||0;
+     bar.style.setProperty('width',target+'%','important');
+   });
+   panel.querySelectorAll('.sample-label strong').forEach((node)=>{
+     const match=node.textContent.match(/\d+/);
+     if(!match)return;
+     const target=Number(match[0]);
+     node.textContent='0%';
+     const duration=1300;
+     const began=performance.now();
+     const tick=(now)=>{
+       const progress=Math.min(1,(now-began)/duration);
+       const eased=1-Math.pow(1-progress,3);
+       node.textContent=Math.round(target*eased)+'%';
+       if(progress<1)requestAnimationFrame(tick);
+     };
+     requestAnimationFrame(tick);
+   });
+ };
+ if('IntersectionObserver' in window){
+   const observer=new IntersectionObserver((entries)=>{
+     if(entries.some(entry=>entry.isIntersecting)){start();observer.disconnect();}
+   },{threshold:.2});
+   observer.observe(panel);
+ }else start();
 })();
 </script>
 </body>
