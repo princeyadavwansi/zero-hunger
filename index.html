@@ -259,41 +259,45 @@ body:not(.admin-standalone) #admin-dashboard{display:none!important}
 <section class="section" id="history"><div class="container"><div class="sectionhead"><span class="kicker">08 · Activity control</span><h2>History & notifications</h2><p>Review your own activity on this device, mark alerts as read, or clear your personal history.</p></div><div class="stats"><div class="stat"><span>Notifications</span><strong id="noticeCount">0</strong><span>On this device</span></div><div class="stat"><span>Unread alerts</span><strong id="unreadCount">0</strong><span>To review</span></div><div class="stat"><span>Activity entries</span><strong id="historyCount">0</strong><span>Community board</span></div></div><div class="boardtools"><span class="smallmuted">Newest first</span><div class="actions" style="margin:0"><button class="btn secondary" id="markReadBtn" type="button">Mark all as read</button><button class="btn secondary" id="clearHistoryBtn" type="button">Delete notification history</button></div></div><div class="listings" id="historyList" aria-live="polite"></div><div class="callout" id="historyBackendNote"><strong>Privacy note:</strong> This history shows only actions submitted from this browser and is stored on this device. Community Board listings are shared with visitors. Marking an alert read or deleting personal history only changes this browser's notification history and does not change shared listings. Email, SMS, and push alerts are not enabled.</div></div></section>
 <section class="section soft" id="survey"><div class="container formwrap"><div class="sectionhead"><span class="kicker">09 · Help us improve</span><h2>Quick user feedback</h2><p>Your feedback helps us improve the Share a Meal prototype.</p></div><div class="sample-survey" aria-label="Illustrative survey results">
 <style>
-.sample-survey{margin:24px 0 28px;padding:24px;border-radius:22px;background:linear-gradient(135deg,#102d42,#17634d);color:#fff;box-shadow:0 18px 42px #102d421c}
-.sample-survey .sample-head{display:flex;gap:12px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:20px}
+.sample-survey{margin:24px 0 28px;padding:26px;border-radius:24px;background:linear-gradient(135deg,#102d42,#17634d);color:#fff;box-shadow:0 18px 42px #102d4225}
+.sample-survey .sample-head{display:flex;gap:12px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:22px}
 .sample-survey .sample-head p{color:#d8e9e4}
-.sample-survey h3{font-size:1.35rem;margin:0 0 6px;color:#fff}
+.sample-survey h3{font-size:1.4rem;margin:0 0 6px;color:#fff}
 .sample-survey p{margin:0;color:#d8e9e4;font-size:.9rem}
-.sample-survey .demo-tag{font-size:.72rem;font-weight:800;letter-spacing:.06em;border:1px solid #ffffff60;background:#ffffff15;padding:8px 11px;border-radius:999px;color:#fff}
-.sample-survey .sample-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.sample-survey .sample-card{padding:20px;border:1px solid #ffffff45;background:linear-gradient(145deg,#163e50,#1b4b52);border-radius:18px;min-width:0;box-shadow:0 10px 26px #061d2b35;transition:transform .25s,background .25s;overflow:visible}.sample-survey .sample-card:hover{transform:translateY(-3px);background:linear-gradient(145deg,#1b4b5d,#20565b)}
-.sample-survey .sample-card h4{margin:0 0 16px;font-size:1rem;line-height:1.45;color:#fff;overflow-wrap:anywhere}
-.sample-survey .sample-row{margin:14px 0}
-.sample-survey .sample-label{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.96rem;line-height:1.4;color:#fff;margin-bottom:8px;min-width:0}.sample-survey .sample-label span{min-width:0;overflow-wrap:anywhere;color:#72f3d2;font-weight:900;letter-spacing:.02em;text-shadow:0 0 12px #35f0c166;animation:surveyLabelGlow 2.4s ease-in-out infinite alternate}.sample-survey .sample-label strong{font-size:1.05rem;line-height:1.2;font-weight:800;font-variant-numeric:tabular-nums;color:#72f3d2;background:#102d42;border:1px solid #8de7dc;padding:5px 8px;border-radius:8px;min-width:54px;flex-shrink:0;text-align:center;display:inline-block}@keyframes surveyLabelGlow{from{text-shadow:0 0 4px #35f0c144;transform:translateX(0)}to{text-shadow:0 0 14px #35f0c1aa;transform:translateX(2px)}}
-.sample-survey .sample-track{height:14px;border-radius:999px;background:#ffffff28;overflow:hidden;box-shadow:inset 0 1px 3px #071c2938}
-.sample-survey .sample-fill{height:100%;width:0!important;border-radius:999px;background:linear-gradient(90deg,#35f0c1,#00b4d8);box-shadow:0 0 14px #20e3b255;transition:width 1.5s cubic-bezier(.2,.75,.25,1)}
-.sample-survey .sample-fill.gold{background:linear-gradient(90deg,#ff5fa2,#e879f9);box-shadow:0 0 14px #e879f955}
-.sample-survey .sample-fill.blue{background:linear-gradient(90deg,#a78bfa,#4f8cff);box-shadow:0 0 14px #7c83ff55}
-.sample-survey .sample-foot{font-size:.76rem;color:#c5ded6;margin-top:17px}
-@media(max-width:700px){.sample-survey{padding:17px}.sample-survey .sample-grid{grid-template-columns:1fr}.sample-survey .sample-card{padding:15px}}
+.sample-survey .demo-tag{font-size:.72rem;font-weight:800;letter-spacing:.04em;border:1px solid #ffffff60;background:#ffffff15;padding:8px 11px;border-radius:999px;color:#fff}
+.sample-survey .sample-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.sample-survey .sample-card{padding:20px 16px 16px;border:1px solid #ffffff30;background:linear-gradient(160deg,#173d4b,#123849);border-radius:20px;min-width:0;box-shadow:0 10px 26px #061d2b30;transition:transform .25s,box-shadow .25s}
+.sample-survey .sample-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px #061d2b45}
+.sample-survey .sample-card h4{margin:0 0 18px;font-size:1rem;line-height:1.45;color:#fff;min-height:44px;overflow-wrap:anywhere}
+.sample-survey .bar-chart{height:220px;display:flex;align-items:stretch;justify-content:space-around;gap:10px;padding:8px 4px 0;border-bottom:1px solid #ffffff35;background:repeating-linear-gradient(to top,transparent 0,transparent 43px,#ffffff12 44px,#ffffff12 45px);border-radius:8px 8px 0 0}
+.sample-survey .bar-column{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px}
+.sample-survey .bar-value{color:#72f3d2;font-size:.9rem;font-weight:900;line-height:1.1;text-shadow:0 0 12px #35f0c155;font-variant-numeric:tabular-nums}
+.sample-survey .bar-track{height:155px;width:min(100%,48px);display:flex;align-items:flex-end;justify-content:center;background:#ffffff12;border-radius:12px 12px 5px 5px;overflow:hidden}
+.sample-survey .sample-bar-fill{height:0;width:100%;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,#72f3d2,#00b4d8);box-shadow:0 0 16px #20e3b244;transition:height 1.25s cubic-bezier(.2,.75,.25,1)}
+.sample-survey .sample-bar-fill.gold{background:linear-gradient(180deg,#f9a8d4,#e879f9);box-shadow:0 0 14px #e879f944}
+.sample-survey .sample-bar-fill.blue{background:linear-gradient(180deg,#c4b5fd,#4f8cff);box-shadow:0 0 14px #7c83ff44}
+.sample-survey .bar-label{min-height:34px;display:flex;align-items:flex-start;justify-content:center;text-align:center;color:#72f3d2;font-size:.76rem;font-weight:850;line-height:1.25;overflow-wrap:anywhere}
+.sample-survey .sample-foot{font-size:.76rem;color:#c5ded6;margin-top:17px;line-height:1.5}
+@media(max-width:800px){.sample-survey .sample-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.sample-survey{padding:16px}.sample-survey .sample-grid{grid-template-columns:1fr}.sample-survey .sample-card{padding:17px 14px}.sample-survey .bar-chart{height:205px}.sample-survey .sample-card h4{min-height:0}}
 </style>
 <div class="sample-head"><div><h3>Community pulse</h3><p>Explore the response patterns at a glance.</p></div><span class="demo-tag">Illustrative survey figures</span></div>
 <div class="sample-grid">
-<div class="sample-card"><h4>Have you seen food wasted?</h4>
-<div class="sample-row"><div class="sample-label"><span>Yes</span><strong>68%</strong></div><div class="sample-track"><div class="sample-fill" data-target="68"></div></div></div>
-<div class="sample-row"><div class="sample-label"><span>Not sure</span><strong>20%</strong></div><div class="sample-track"><div class="sample-fill gold" data-target="20"></div></div></div>
-<div class="sample-row"><div class="sample-label"><span>No</span><strong>12%</strong></div><div class="sample-track"><div class="sample-fill blue" data-target="12"></div></div></div>
-</div>
-<div class="sample-card"><h4>Most useful feature</h4>
-<div class="sample-row"><div class="sample-label"><span>Find food support</span><strong>42%</strong></div><div class="sample-track"><div class="sample-fill" data-target="42"></div></div></div>
-<div class="sample-row"><div class="sample-label"><span>Offer surplus food</span><strong>28%</strong></div><div class="sample-track"><div class="sample-fill gold" data-target="28"></div></div></div>
-<div class="sample-row"><div class="sample-label"><span>Volunteer / board</span><strong>30%</strong></div><div class="sample-track"><div class="sample-fill blue" data-target="30"></div></div></div>
-</div>
-<div class="sample-card"><h4>Willing to help locally</h4>
-<div class="sample-row"><div class="sample-label"><span>Yes</span><strong>61%</strong></div><div class="sample-track"><div class="sample-fill" data-target="61"></div></div></div>
-<div class="sample-row"><div class="sample-label"><span>Maybe</span><strong>27%</strong></div><div class="sample-track"><div class="sample-fill gold" data-target="27"></div></div></div>
-<div class="sample-row"><div class="sample-label"><span>Not now</span><strong>12%</strong></div><div class="sample-track"><div class="sample-fill blue" data-target="12"></div></div></div>
-</div>
+<div class="sample-card"><h4>Have you seen food wasted?</h4><div class="bar-chart" role="img" aria-label="Illustrative results: Yes 68 percent, Not sure 20 percent, No 12 percent">
+<div class="bar-column"><span class="bar-value" data-target="68">68%</span><div class="bar-track"><div class="sample-bar-fill" data-target="68"></div></div><span class="bar-label">Yes</span></div>
+<div class="bar-column"><span class="bar-value" data-target="20">20%</span><div class="bar-track"><div class="sample-bar-fill gold" data-target="20"></div></div><span class="bar-label">Not sure</span></div>
+<div class="bar-column"><span class="bar-value" data-target="12">12%</span><div class="bar-track"><div class="sample-bar-fill blue" data-target="12"></div></div><span class="bar-label">No</span></div>
+</div></div>
+<div class="sample-card"><h4>Most useful feature</h4><div class="bar-chart" role="img" aria-label="Illustrative results: Find food support 42 percent, Offer surplus food 28 percent, Volunteer or board 30 percent">
+<div class="bar-column"><span class="bar-value" data-target="42">42%</span><div class="bar-track"><div class="sample-bar-fill" data-target="42"></div></div><span class="bar-label">Find food support</span></div>
+<div class="bar-column"><span class="bar-value" data-target="28">28%</span><div class="bar-track"><div class="sample-bar-fill gold" data-target="28"></div></div><span class="bar-label">Offer surplus food</span></div>
+<div class="bar-column"><span class="bar-value" data-target="30">30%</span><div class="bar-track"><div class="sample-bar-fill blue" data-target="30"></div></div><span class="bar-label">Volunteer / board</span></div>
+</div></div>
+<div class="sample-card"><h4>Willing to help locally</h4><div class="bar-chart" role="img" aria-label="Illustrative results: Yes 61 percent, Maybe 27 percent, Not now 12 percent">
+<div class="bar-column"><span class="bar-value" data-target="61">61%</span><div class="bar-track"><div class="sample-bar-fill" data-target="61"></div></div><span class="bar-label">Yes</span></div>
+<div class="bar-column"><span class="bar-value" data-target="27">27%</span><div class="bar-track"><div class="sample-bar-fill gold" data-target="27"></div></div><span class="bar-label">Maybe</span></div>
+<div class="bar-column"><span class="bar-value" data-target="12">12%</span><div class="bar-track"><div class="sample-bar-fill blue" data-target="12"></div></div><span class="bar-label">Not now</span></div>
+</div></div>
 </div>
 <div class="sample-foot">Illustrative figures for the project concept; actual visitor responses can be collected through the feedback form below.</div>
 </div><div class="formcard"><form id="surveyForm"><div class="field"><label>Have you seen food being wasted while others needed food? *</label><div class="surveyoptions"><label><input type="radio" name="waste" value="Yes" required> Yes</label><label><input type="radio" name="waste" value="No"> No</label><label><input type="radio" name="waste" value="Not sure"> Not sure</label></div></div><div class="field" style="margin-top:17px"><label for="surveyFeature">Which feature seems most useful? *</label><select id="surveyFeature" required><option value="">Choose one</option><option>Find food support</option><option>Offer surplus food</option><option>Volunteer locally</option><option>Browse a community board</option></select></div><div class="field" style="margin-top:15px"><label for="surveyImprove">What would you improve? (optional)</label><textarea id="surveyImprove" maxlength="400" placeholder="Share a suggestion…"></textarea></div><button class="btn" type="submit">Submit feedback →</button></form><div class="result" id="surveyResult" role="status" aria-live="polite"></div><p class="smallmuted" style="margin-bottom:0">Feedback is saved to the project database. Do not include private or sensitive information.</p></div></div></section>
@@ -378,14 +382,12 @@ if(adminSession?.access_token&&adminSession.user?.app_metadata?.role==='admin'){
  const panel=document.querySelector('.sample-survey');
  if(!panel)return;
  const start=()=>{
-   panel.querySelectorAll('.sample-fill[data-target]').forEach((bar)=>{
+   panel.querySelectorAll('.sample-bar-fill[data-target]').forEach((bar)=>{
      const target=Number(bar.dataset.target)||0;
-     bar.style.setProperty('width',target+'%','important');
+     bar.style.height=target+'%';
    });
-   panel.querySelectorAll('.sample-label strong').forEach((node)=>{
-     const match=node.textContent.match(/\d+/);
-     if(!match)return;
-     const target=Number(match[0]);
+   panel.querySelectorAll('.bar-value[data-target]').forEach((node)=>{
+     const target=Number(node.dataset.target)||0;
      node.textContent='0%';
      const duration=1300;
      const began=performance.now();
