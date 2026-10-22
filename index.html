@@ -18,6 +18,17 @@
 @media(max-width:900px){.links{gap:13px}.links a{font-size:.8rem}.herogrid{gap:32px}.hero h1{font-size:clamp(2.7rem,5vw,4rem)}.artpanel{padding:22px}.artemoji{height:175px;min-height:175px;font-size:4.5rem}.grid3,.journey,.listings{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.navinner{min-height:68px}.menu{display:block}.links{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;padding:15px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:6px}.links.open{display:flex}.links a{font-size:.9rem;padding:9px}.hero{padding:48px 0 52px}.herogrid{grid-template-columns:1fr;gap:32px}.hero h1{font-size:clamp(2.7rem,11vw,3.7rem)}.hero p{font-size:1rem}.heroart{width:100%;max-width:520px;margin:auto}.artpanel{padding:18px}.artemoji{height:160px;min-height:160px;font-size:4rem;gap:10px}.floatcard{margin-top:10px;font-size:.9rem}.section{padding:55px 0}.grid3,.journey,.listings,.stats,.steps{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.impactbox{grid-template-columns:1fr;padding:26px}.impactemoji{display:none}.stat{padding:15px}.boardtools{align-items:stretch}.search{width:100%}.footbottom{display:block}.footbottom span{display:block;margin-top:5px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+/* Premium scroll-reveal motion */
+.scroll-reveal{opacity:0;transform:translate3d(0,28px,0);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
+.scroll-reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
+.scroll-reveal.from-left{transform:translate3d(-28px,0,0)}
+.scroll-reveal.from-right{transform:translate3d(28px,0,0)}
+.scroll-reveal.from-left.is-visible,.scroll-reveal.from-right.is-visible{transform:translate3d(0,0,0)}
+.scroll-progress{position:fixed;top:0;left:0;width:100%;height:3px;z-index:9999;pointer-events:none;background:transparent}
+.scroll-progress span{display:block;width:100%;height:100%;transform:scaleX(0);transform-origin:left center;background:linear-gradient(90deg,#16a34a,#84cc16,#facc15);box-shadow:0 0 10px #22c55e66}
+@media(prefers-reduced-motion:reduce){.scroll-reveal,.scroll-reveal.is-visible,.scroll-reveal.from-left,.scroll-reveal.from-right{opacity:1;transform:none;transition:none;will-change:auto}.scroll-progress{display:none}}
+
 </style>
 </head>
 <body>
@@ -67,6 +78,16 @@
 <script>
 (()=> {
 'use strict';
+
+// Polished scroll animations: reveal sections and cards as they enter the viewport.
+const progress=document.createElement('div');progress.className='scroll-progress';progress.setAttribute('aria-hidden','true');progress.innerHTML='<span></span>';document.body.prepend(progress);
+const progressBar=progress.firstElementChild;
+const updateScrollProgress=()=>{const max=document.documentElement.scrollHeight-window.innerHeight;progressBar.style.transform='scaleX('+(max>0?Math.min(1,window.scrollY/max):0)+')'};
+window.addEventListener('scroll',updateScrollProgress,{passive:true});window.addEventListener('resize',updateScrollProgress);updateScrollProgress();
+const revealTargets=document.querySelectorAll('.sectionhead,.grid3 > *, .journey > *, .steps > *, .stats > *, .impactbox, .formcard, .board, .heroCopy, .artpanel, .problem-card, .feature-card');
+revealTargets.forEach((el,index)=>{el.classList.add('scroll-reveal');if(el.matches('.heroCopy'))el.classList.add('from-left');else if(el.matches('.artpanel'))el.classList.add('from-right');el.style.transitionDelay=(index%4)*85+'ms'});
+if('IntersectionObserver' in window){const revealObserver=new IntersectionObserver((items,observer)=>{items.forEach(item=>{if(item.isIntersecting){item.target.classList.add('is-visible');observer.unobserve(item.target)}})},{threshold:.12,rootMargin:'0px 0px -35px 0px'});revealTargets.forEach(el=>revealObserver.observe(el))}else{revealTargets.forEach(el=>el.classList.add('is-visible'))}
+
 const STORE='shareAMealPrototype_v2';
 const SUPABASE_URL='https://zjjvrephptjvivcdifda.supabase.co';
 const SUPABASE_KEY='sb_publishable_'+'JOm3iDYCHEzpAxo0uI4Fcw_LJiMCASf';
