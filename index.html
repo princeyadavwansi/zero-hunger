@@ -23,6 +23,58 @@
 .links .navcta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:10px;box-shadow:0 6px 16px rgba(39,83,58,.15);font-size:.83rem;font-weight:750}
 .links .navcta:hover{background:var(--green-dark);color:#fff;transform:translateY(-1px);box-shadow:0 9px 20px rgba(39,83,58,.2)}
 .nav{border-bottom-color:rgba(39,83,58,.12)}
+/* Marketplace-first redesign: less presentation, more usable product */
+body>.topnote{font-size:.72rem;padding:5px 12px}
+.navinner{width:min(1440px,96%);min-height:72px}
+.brand{font-size:1.08rem}
+.links{gap:clamp(8px,.9vw,15px)}
+.links a{font-size:.78rem}
+.links a[href="#problem"],.links a[href="#impact"],.links a[href="#how"],.links a[href="#project"],.links a[href="#survey"]{display:none}
+.hero{padding:38px 0 42px;background:linear-gradient(115deg,#f4f8f3,#fff 70%)}
+.herogrid{grid-template-columns:1fr .55fr;gap:38px}
+.hero h1{font-size:clamp(2.35rem,4vw,3.7rem);max-width:650px;margin:12px 0}
+.hero p{font-size:1rem;max-width:650px}
+.hero .actions .btn:first-child{font-size:0}
+.hero .actions .btn:first-child:after{content:"Browse food offers";font-size:.9rem}
+.hero .actions .btn:first-child span{display:none}
+.hero .actions .btn:first-child{font-size:.9rem}
+.hero .actions .btn.secondary{display:none}
+.herofoot span:nth-child(2){display:none}
+.heroart .artpanel{padding:18px}
+.heroart .artemoji{height:115px;min-height:115px;font-size:3.4rem}
+.heroart .artpanel h3{margin:13px 0 5px;font-size:1.05rem}
+.heroart .artpanel p,.heroart .floatcard{font-size:.82rem}
+main{display:flex;flex-direction:column}
+#board{order:1;padding:34px 0 42px;background:#f8faf8}
+#help{order:2;padding:42px 0}
+#donate{order:3;padding:42px 0;background:#f8faf8}
+#volunteer{order:4;padding:36px 0}
+#history{order:5;padding:36px 0;background:#f8faf8}
+#survey{order:6;padding:34px 0}
+#problem,#how,main>.section:not(#help):not(#donate):not(#volunteer):not(#board):not(#history):not(#project):not(#survey),#impact,#food-rescue,#community-stories,#project{display:none!important}
+#board .sectionhead{margin-bottom:20px;text-align:left}
+#board .sectionhead h2{font-size:clamp(1.5rem,2.4vw,2rem)}
+#board .stats{grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:14px}
+#board .stat{padding:14px 17px}
+#board .stat strong{font-size:1.6rem}
+.formwrap{max-width:980px}
+.formwrap .sectionhead{text-align:left;margin:0 0 20px;max-width:none}
+.formwrap .sectionhead h2{font-size:clamp(1.5rem,2.4vw,2rem);margin:5px 0}
+.formwrap .sectionhead .kicker{display:none}
+.formcard{box-shadow:0 8px 24px rgba(19,55,36,.045)}
+footer .footergrid{gap:16px}
+@media(max-width:700px){
+ .navinner{width:92%;min-height:68px}
+ .links{top:68px}
+ .hero{padding:32px 0}
+ .herogrid{grid-template-columns:1fr;gap:20px}
+ .hero h1{font-size:clamp(2.2rem,10vw,3.1rem)}
+ .heroart .artpanel{display:none}
+ .heroart .floatcard{display:none}
+ #board .stats{grid-template-columns:1fr 1fr}
+ #board .stat:last-child{grid-column:1/-1}
+}
+
 /* Keep the full navigation and Share Food button inside the viewport */
 .navinner{width:min(1600px,96%);margin-inline:auto;gap:clamp(10px,1.2vw,20px)}
 .links{gap:clamp(6px,.7vw,13px);min-width:0}
