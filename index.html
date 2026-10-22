@@ -183,6 +183,57 @@ html{scroll-behavior:smooth}
 /* Admin section is only shown via its direct admin URL or an authorized session */\n#admin-dashboard{display:none}#admin-dashboard.admin-access-visible{display:block}\n
 /* Keep admin login out of the public homepage, including direct hash links */
 body:not(.admin-standalone) #admin-dashboard{display:none!important}
+/* Fresh Food Rescue-inspired visual pass */
+:root{--green:#176344;--green-dark:#103f2d;--green-soft:#edf6ee;--ink:#193528;--muted:#64756a;--line:#e0e9e1;--canvas:#f7faf7}
+.topnote{display:none!important}
+.nav{background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #17634418}
+.navinner{width:min(1280px,92%);min-height:76px}
+.brandmark{border-radius:14px;background:linear-gradient(145deg,#24784e,#104b35);box-shadow:0 8px 18px #17634425}
+.links{gap:clamp(9px,1.1vw,17px)}
+.links .navcta{border-radius:999px;padding:12px 18px;box-shadow:0 8px 20px #17634422}
+.hero{position:relative;overflow:hidden;padding:clamp(58px,7vw,100px) 0;background:radial-gradient(ellipse at 8% 15%,#e5f4e5 0,transparent 38%),linear-gradient(115deg,#f8fbf7,#fff 60%,#f0f7ef);border:0}
+.hero:before{content:"";position:absolute;width:440px;height:440px;right:-170px;top:-240px;border:1px solid #17634414;border-radius:50%;box-shadow:0 0 0 38px #17634408,0 0 0 78px #17634405;pointer-events:none}
+.herogrid{width:min(1200px,90%);grid-template-columns:1.02fr .98fr;gap:clamp(28px,5vw,70px)}
+.eyebrow{padding:8px 13px;border:1px solid #dceade;background:#fff;border-radius:999px;letter-spacing:.075em;font-size:.7rem;box-shadow:0 5px 20px #183c2b08}
+.hero h1{font-size:clamp(2.7rem,5.2vw,4.9rem);letter-spacing:-.065em;line-height:1.04;margin:23px 0 20px}
+.hero h1 em{color:#25804e}
+.hero p{font-size:clamp(1rem,1.25vw,1.12rem);line-height:1.8;color:#5a6c60}
+.hero .btn{border-radius:999px;padding:14px 21px;box-shadow:0 9px 22px #17634424;transition:transform .25s,box-shadow .25s}
+.hero .btn:hover{transform:translateY(-3px);box-shadow:0 14px 28px #1763442a}
+.hero .btn.secondary{box-shadow:none;border-color:#d6e3d8}
+.herofoot{gap:9px 12px;font-size:.76rem}
+.herofoot span{padding:7px 10px;border-radius:999px;background:#ffffffb8;border:1px solid #e5eee6}
+.heroart{position:relative;max-width:560px;width:100%;justify-self:end;animation:foodHeroIn .9s .12s cubic-bezier(.2,.8,.2,1) both}
+.artpanel{overflow:hidden;padding:17px;background:#fff;border:1px solid #e2ebe2;border-radius:25px;box-shadow:0 28px 70px #173d2817;animation:none;transform:none}
+.artemoji{height:clamp(230px,29vw,360px);min-height:0;border-radius:17px;background:#e6f1e3 url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1100&q=85") center/cover no-repeat;font-size:0;gap:0}
+.artemoji span{display:none}
+.artpanel h3{margin:19px 8px 5px;font-size:1.2rem;letter-spacing:-.035em}
+.artpanel p{margin:0 8px 8px;font-size:.9rem}
+.floatcard{position:absolute;right:-16px;bottom:45px;max-width:230px;padding:15px 18px;background:#fff;border:1px solid #e3ece4;border-radius:16px;box-shadow:0 18px 40px #173d2820;animation:foodFloat 5s ease-in-out infinite;font-size:.72rem;letter-spacing:.06em}
+.floatcard small{margin-top:5px;font-size:.84rem;letter-spacing:0;line-height:1.45}
+@keyframes foodHeroIn{from{opacity:0;transform:translateY(22px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes foodFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+#board{background:#f6faf6!important;padding:54px 0 60px!important}
+#board .stat{border:1px solid #e1ebe1;border-radius:16px;box-shadow:0 8px 26px #173d2806;transition:transform .25s,box-shadow .25s}
+#board .stat:hover{transform:translateY(-4px);box-shadow:0 16px 30px #173d2810}
+#board .stat strong{font-size:1.9rem;letter-spacing:-.05em}
+#board .filter{border-radius:999px;padding:9px 15px;transition:background .2s,transform .2s}
+#board .filter:hover{transform:translateY(-1px)}
+#board .search{border-radius:999px;padding:12px 17px}
+.listings{gap:17px}
+.listing{border:1px solid #e0e9e1;border-radius:17px;padding:22px;box-shadow:0 8px 28px #173d2806;transition:transform .28s,box-shadow .28s,border-color .28s}
+.listing:hover{transform:translateY(-5px);box-shadow:0 20px 38px #173d2812;border-color:#c7ddca}
+.pill{border-radius:999px}
+.formcard{border:1px solid #e1eae2;border-radius:21px;box-shadow:0 18px 55px #173d280a}
+.notice{border-radius:12px;line-height:1.6}
+.field input,.field select,.field textarea{border-radius:11px;padding:13px 14px}
+.formcard .btn{border-radius:999px;padding:13px 20px;box-shadow:0 8px 20px #17634420;transition:transform .2s,box-shadow .2s}
+.formcard .btn:hover{transform:translateY(-2px);box-shadow:0 13px 26px #17634427}
+#help{background:#fff!important}#donate{background:#f6faf6!important}#volunteer{background:#fff!important}#history{background:#f6faf6!important}
+@media(max-width:900px){.herogrid{grid-template-columns:1fr .85fr;gap:26px}.hero h1{font-size:clamp(2.55rem,5.7vw,3.8rem)}.floatcard{right:-7px;bottom:32px}}
+@media(max-width:700px){.navinner{width:92%;min-height:70px}.links{top:70px;border-radius:0 0 16px 16px;box-shadow:0 18px 28px #173d2810}.hero{padding:46px 0}.herogrid{grid-template-columns:1fr;gap:29px}.hero h1{font-size:clamp(2.65rem,10.8vw,3.65rem)}.heroart{max-width:520px;justify-self:center}.artpanel{padding:12px;border-radius:20px}.artemoji{height:230px;border-radius:14px}.floatcard{right:-5px;bottom:45px;max-width:205px;padding:12px 14px}.listings{grid-template-columns:1fr}#board{padding:40px 0 46px!important}.formcard{border-radius:17px}}
+@media(prefers-reduced-motion:reduce){.heroart,.floatcard{animation:none!important}.hero .btn,.listing,#board .stat{transition:none!important}}
+
 </style>
 </head>
 <body>
