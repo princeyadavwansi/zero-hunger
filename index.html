@@ -110,6 +110,29 @@ html{scroll-behavior:smooth}
 /* Admin section is only shown via its direct admin URL or an authorized session */\n#admin-dashboard{display:none}#admin-dashboard.admin-access-visible{display:block}\n
 /* Keep admin login out of the public homepage, including direct hash links */
 body:not(.admin-standalone) #admin-dashboard{display:none!important}
+
+/* Unique photo-led hero */
+.hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 8% 0%,#e7f3e9 0%,transparent 45%),linear-gradient(115deg,#f4f8f3 0%,#fff 72%)}
+.hero:after{content:"";position:absolute;z-index:-1;width:360px;height:360px;right:-180px;bottom:-210px;border:1px solid #17634420;border-radius:50%;box-shadow:0 0 0 38px #17634408,0 0 0 78px #17634405}
+.hero-photo-card{position:relative;min-height:470px;height:clamp(430px,43vw,570px);overflow:hidden;border-radius:24px;background:linear-gradient(135deg,#2b6748,#e3c28c);box-shadow:0 28px 65px rgba(17,55,35,.22);isolation:isolate}
+.hero-children-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform:scale(1.015);transition:transform 1s cubic-bezier(.22,1,.36,1)}
+.hero-photo-card:hover .hero-children-photo{transform:scale(1.06)}
+.photo-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,35,22,.06) 5%,rgba(9,35,22,.02) 28%,rgba(8,31,20,.82) 100%),linear-gradient(90deg,rgba(8,31,20,.13),transparent 75%);pointer-events:none}
+.photo-label{position:absolute;top:20px;left:20px;display:inline-flex;align-items:center;gap:9px;padding:10px 13px;border:1px solid rgba(255,255,255,.45);border-radius:999px;background:rgba(255,255,255,.91);color:#174a32;font-size:.67rem;font-weight:850;letter-spacing:.08em;box-shadow:0 8px 24px #0a2a181f}
+.photo-dot{width:8px;height:8px;border-radius:50%;background:#e0a93e;box-shadow:0 0 0 4px #e0a93e22}
+.photo-message{position:absolute;left:clamp(22px,4vw,38px);right:22px;bottom:clamp(92px,9vw,120px);color:#fff}
+.photo-kicker{display:block;font-size:.68rem;font-weight:850;letter-spacing:.16em;color:#e6f1b7;margin-bottom:12px}
+.photo-message h2{font-size:clamp(2.45rem,4.3vw,4rem);line-height:.99;letter-spacing:-.065em;margin:0 0 14px;color:white}
+.photo-message h2 em{font-style:normal;color:#e4f0a9}
+.photo-message p{margin:0;color:#f0f6f1;font-size:.93rem;line-height:1.6}
+.photo-corner-note{position:absolute;left:18px;right:18px;bottom:18px;display:flex;align-items:center;gap:12px;padding:13px 15px;border:1px solid rgba(255,255,255,.24);border-radius:13px;background:rgba(255,255,255,.14);backdrop-filter:blur(14px);color:#fff}
+.photo-heart{width:39px;height:39px;flex:0 0 39px;display:grid;place-items:center;border-radius:11px;background:#e8f1bd;color:#24583b;font-size:1.2rem}
+.photo-corner-note strong,.photo-corner-note small{display:block}.photo-corner-note strong{font-size:.82rem}.photo-corner-note small{font-size:.72rem;color:#e2eee5;margin-top:2px}
+.photo-fallback{background:radial-gradient(circle at 65% 25%,#e8cf8f,transparent 24%),linear-gradient(145deg,#174d35,#3f845d 55%,#d7b16b)}
+.photo-fallback:before{content:"🥣  🤝  🍎";position:absolute;inset:0;display:grid;place-items:center;font-size:clamp(3.5rem,7vw,6rem);letter-spacing:.2em}
+@media(max-width:700px){.hero-photo-card{height:440px;min-height:420px;border-radius:20px}.photo-label{top:14px;left:14px;font-size:.59rem;padding:9px 11px}.photo-message{left:22px;bottom:105px}.photo-message h2{font-size:3.1rem}.photo-corner-note{left:12px;right:12px;bottom:12px}.heroart{max-width:520px}}
+@media(prefers-reduced-motion:reduce){.hero-children-photo,.hero-photo-card:hover .hero-children-photo{transition:none;transform:none}}
+
 </style>
 </head>
 <body>
@@ -125,7 +148,7 @@ body:not(.admin-standalone) #admin-dashboard{display:none!important}
 <p>Share a Meal is a community-focused concept that explores how people can offer safe surplus food, find support, and volunteer to help reduce food waste.</p>
 <div class="actions"><a class="btn" href="#how">Explore the project <span>→</span></a><a class="btn secondary" href="#problem">Why it matters</a></div>
 <div class="herofoot"><span>🌱 SDG 2: Zero Hunger</span><span>🤝 Community-led concept</span><span>📱 Mobile-friendly demo</span></div></div>
-<div class="heroart"><div class="artpanel"><div class="artemoji" aria-label="Food sharing illustration"><span aria-hidden="true">🥗</span><span aria-hidden="true">🤝</span><span aria-hidden="true">🍎</span></div><h3>Food shared. Communities strengthened.</h3><p>A practical concept for helping people discover food support and responsibly share suitable surplus food.</p></div><div class="floatcard">OUR SHARED GOAL<small>Every meal and helping hand matters</small></div></div>
+<div class="heroart"><div class="hero-photo-card"><img class="hero-children-photo" src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1400&q=88" alt="Children together, representing the importance of access to food and community support" fetchpriority="high" onerror="this.style.display='none';this.parentElement.classList.add('photo-fallback')"><div class="photo-shade"></div><div class="photo-label"><span class="photo-dot"></span> EVERY CHILD DESERVES A MEAL</div><div class="photo-message"><span class="photo-kicker">SHARE FOOD · SHARE HOPE</span><h2>Small kindness.<br><em>Big change.</em></h2><p>One meal can make a meaningful difference.</p></div><div class="photo-corner-note"><span class="photo-heart">♥</span><span><strong>Be part of the change</strong><small>Give what you can. Help where you can.</small></span></div></div><div class="floatcard">OUR SHARED GOAL<small>Every meal and helping hand matters</small></div></div>
 </div></header>
 <main>
 <section class="section" id="problem"><div class="container"><div class="sectionhead"><span class="kicker">01 · Understand</span><h2>Two problems. One community opportunity.</h2><p>Food insecurity and avoidable food waste can exist side by side. Our concept explores a safer, simpler way to connect people and resources.</p></div>
