@@ -43,6 +43,48 @@ html{scroll-behavior:smooth}
 @media(hover:hover){.grid3>* ,.journey>* ,.steps>* ,.stats>*{transition:transform .35s var(--motion-ease),box-shadow .35s var(--motion-ease)}.grid3>*:hover,.journey>*:hover,.steps>*:hover,.stats>*:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(19,55,36,.10)}.links a:not(.navcta){transition:color .2s ease,transform .2s ease}.links a:not(.navcta):hover{transform:translateY(-1px)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scroll-reveal,.scroll-reveal.is-visible,.scroll-reveal.from-left,.scroll-reveal.from-right,.scroll-reveal.pop-in,.scroll-reveal.pop-in.is-visible{opacity:1;transform:none;filter:none;transition:none;will-change:auto}.hero .eyebrow,.hero h1,.heroCopy>p,.heroCopy .heroActions,.heroCopy .heroMeta,.artpanel{animation:none}.scroll-progress{display:none}}
 
+
+/* Premium visual upgrade */
+.impact-showcase{position:relative;overflow:hidden;background:linear-gradient(135deg,#103f2d 0%,#176344 58%,#2b7957 100%);color:#fff}
+.impact-showcase:before,.impact-showcase:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.13);border-radius:50%;pointer-events:none}
+.impact-showcase:before{width:340px;height:340px;right:-90px;top:-160px}.impact-showcase:after{width:220px;height:220px;left:-110px;bottom:-130px}
+.impact-showcase .sectionhead h2,.impact-showcase .sectionhead p{color:#fff}.impact-showcase .kicker{color:#d6e9a5}
+.impact-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;position:relative;z-index:1}
+.impact-metric{padding:24px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.075);border-radius:14px;backdrop-filter:blur(8px);text-align:center}
+.impact-metric strong{display:block;font-size:clamp(2.3rem,4vw,3.4rem);letter-spacing:-.06em;line-height:1.1;color:#e6f3b2}
+.impact-metric span{display:block;margin-top:10px;color:#e5f0e8;font-size:.9rem}
+.impact-note{position:relative;z-index:1;text-align:center;color:#d4e4d8;font-size:.78rem;margin:18px auto 0;max-width:700px}
+.rescue-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.rescue-card{position:relative;min-height:245px;padding:clamp(24px,4vw,38px);border-radius:14px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between}
+.rescue-card.waste{background:linear-gradient(145deg,#f8f1e9,#f2e7d9)}
+.rescue-card.share{background:linear-gradient(145deg,#edf6e9,#dcebdc);border-color:#c9dfcb}
+.rescue-emoji{font-size:3rem;line-height:1;filter:drop-shadow(0 7px 10px #1b3a2415)}
+.rescue-card h3{font-size:1.4rem;letter-spacing:-.035em;margin:22px 0 7px}
+.rescue-card p{color:#526257;max-width:420px;margin:0;line-height:1.75}
+.rescue-tag{align-self:flex-start;padding:6px 10px;border-radius:999px;font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:#fff9;color:#405548;border:1px solid #ffffffa8}
+.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.story-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;transition:transform .25s,box-shadow .25s}
+.story-card:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(19,55,36,.09)}
+.story-quote{font-size:2rem;color:var(--green);line-height:1}
+.story-card blockquote{margin:12px 0 22px;color:#43574a;line-height:1.8;font-size:.94rem}
+.story-person{display:flex;align-items:center;gap:11px;padding-top:14px;border-top:1px solid #edf1ed}
+.story-avatar{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:var(--green-soft);font-size:1.1rem}
+.story-person strong{display:block;font-size:.84rem}.story-person small{display:block;color:var(--muted);font-size:.74rem}
+.sample-label{display:inline-flex;align-items:center;gap:6px;color:#78652f;background:#fff8df;border:1px solid #efe2b6;border-radius:999px;padding:5px 9px;font-size:.7rem;font-weight:800}
+.mission-banner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:clamp(24px,4vw,42px);border-radius:14px;background:#f1f6ee;border:1px solid #dbe8d9}
+.mission-banner h2{font-size:clamp(1.5rem,3vw,2.2rem);letter-spacing:-.045em;line-height:1.2;margin:0 0 9px;color:#1a3829}
+.mission-banner p{margin:0;color:var(--muted);max-width:610px}
+.floating-mission{position:fixed;right:20px;bottom:20px;z-index:25;display:flex;align-items:center;gap:9px;padding:12px 17px;border-radius:999px;background:var(--green);color:#fff;text-decoration:none;font-size:.84rem;font-weight:800;box-shadow:0 9px 28px rgba(16,75,53,.24);transition:transform .2s,box-shadow .2s}
+.floating-mission:hover{transform:translateY(-3px);box-shadow:0 13px 32px rgba(16,75,53,.3)}
+.hero .artemoji{background:radial-gradient(circle at 30% 25%,#fff 0,#f0f6e9 62%,#e2eedc 100%)}
+.hero .artemoji span{filter:drop-shadow(0 8px 8px rgba(23,99,68,.12));animation:foodBob 4s ease-in-out infinite}
+.hero .artemoji span:nth-child(2){animation-delay:.45s}.hero .artemoji span:nth-child(3){animation-delay:.9s}
+@keyframes foodBob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}
+.btn,.navcta,.filter,.floating-mission{transition:transform .2s ease,background .2s ease,border-color .2s ease,box-shadow .2s ease}
+.btn:focus-visible,.filter:focus-visible,.floating-mission:focus-visible,a:focus-visible{outline:3px solid #e7b94f;outline-offset:3px}
+@media(max-width:760px){.impact-metrics,.story-grid{grid-template-columns:1fr}.rescue-grid{grid-template-columns:1fr}.mission-banner{align-items:flex-start;flex-direction:column}.floating-mission{right:12px;bottom:12px;padding:11px 14px}.impact-metric{padding:19px}.rescue-card{min-height:220px}}
+@media(prefers-reduced-motion:reduce){.hero .artemoji span{animation:none}.story-card,.btn,.floating-mission{transition:none}}
+
 </style>
 </head>
 <body>
@@ -50,7 +92,7 @@ html{scroll-behavior:smooth}
 <nav class="nav"><div class="container navinner">
 <a class="brand" href="#home"><span class="brandmark">SM</span><span>Share a Meal<small>Community food connection</small></span></a>
 <button class="menu" id="menuBtn" aria-expanded="false" aria-label="Open navigation">☰ Menu</button>
-<div class="links" id="navLinks"><a href="#problem">The Problem</a><a href="#how">How It Works</a><a href="#board">Community Board</a><a href="#history">History & Alerts</a><a href="#survey">Give Feedback</a><a class="navcta" href="#donate">Share Food ↗</a></div>
+<div class="links" id="navLinks"><a href="#problem">The Problem</a><a href="#impact">Our Purpose</a><a href="#how">How It Works</a><a href="#board">Community Board</a><a href="#history">History & Alerts</a><a href="#survey">Give Feedback</a><a class="navcta" href="#donate">Share Food ↗</a></div>
 </div></nav>
 <header class="hero" id="home"><div class="container herogrid">
 <div><span class="eyebrow"><span></span> SMALL ACTIONS. SHARED IMPACT.</span>
@@ -70,6 +112,12 @@ html{scroll-behavior:smooth}
 <div class="steps"><article class="step"><span class="stepnum">01 · Discover</span><h3>Listen</h3><p>Explore food waste, food access and the needs of different community members.</p></article><article class="step"><span class="stepnum">02 · Define</span><h3>Focus</h3><p>Define the key challenge: making local food support easier to discover and coordinate.</p></article><article class="step"><span class="stepnum">03 · Develop</span><h3>Explore</h3><p>Build and compare ideas such as listings, request forms and volunteer support.</p></article><article class="step"><span class="stepnum">04 · Deliver</span><h3>Test & improve</h3><p>Use feedback to improve the prototype. Real-world use needs verified partners and safeguards.</p></article></div>
 <div class="callout"><strong>Problem statement:</strong> People who need food support need a clearer way to discover local options, while donors need a responsible route for offering suitable surplus food.</div></div></section>
 
+
+<section class="section impact-showcase" id="impact"><div class="container"><div class="sectionhead"><span class="kicker">A small idea with a shared purpose</span><h2>Every good meal starts with a community.</h2><p>Our prototype brings three simple pathways together to explore a more connected food-support journey.</p></div><div class="impact-metrics"><article class="impact-metric"><strong data-count-to="3">0</strong><span>Ways to participate</span></article><article class="impact-metric"><strong data-count-to="4">0</strong><span>Design Thinking stages</span></article><article class="impact-metric"><strong data-count-to="1">0</strong><span>Shared goal: Zero Hunger</span></article></div><p class="impact-note">These numbers describe the project design, not meals delivered or people helped. This is a student prototype, not an active food distribution service.</p></div></section>
+<section class="section" id="food-rescue"><div class="container"><div class="sectionhead"><span class="kicker">The opportunity</span><h2>From surplus to shared support.</h2><p>When safe surplus food and local support can be coordinated responsibly, communities have an opportunity to reduce avoidable waste.</p></div><div class="rescue-grid"><article class="rescue-card waste"><span class="rescue-tag">The challenge</span><div><div class="rescue-emoji" aria-hidden="true">🥡 🗑️</div><h3>Good food can go to waste</h3><p>Extra food may be overlooked when there is no clear way to list it, check suitability, and coordinate a safe handover.</p></div></article><article class="rescue-card share"><span class="rescue-tag">The idea</span><div><div class="rescue-emoji" aria-hidden="true">🥗 🤝 🍎</div><h3>Make sharing easier to organise</h3><p>A community listing can help people explore offers, requests and volunteer roles—with real-world safety checks and partner coordination.</p></div></article></div></div></section>
+<section class="section soft" id="community-stories"><div class="container"><div class="sectionhead"><span class="kicker">Community first</span><h2>Designed around people helping people.</h2><p>Example perspectives that this concept aims to support. These are illustrative personas, not real testimonials.</p><span class="sample-label">✦ Illustrative examples</span></div><div class="story-grid"><article class="story-card"><div class="story-quote" aria-hidden="true">“</div><blockquote>“I have extra food after an event. I need a clear, responsible process to offer it safely.”</blockquote><div class="story-person"><span class="story-avatar">🥘</span><span><strong>A potential food donor</strong><small>Example user perspective</small></span></div></article><article class="story-card"><div class="story-quote" aria-hidden="true">“</div><blockquote>“Finding nearby support should be simpler, clearer and respectful of people's privacy.”</blockquote><div class="story-person"><span class="story-avatar">💚</span><span><strong>A person seeking support</strong><small>Example user perspective</small></span></div></article><article class="story-card"><div class="story-quote" aria-hidden="true">“</div><blockquote>“I can help by sharing time, spreading awareness or supporting careful collection planning.”</blockquote><div class="story-person"><span class="story-avatar">🙌</span><span><strong>A potential volunteer</strong><small>Example user perspective</small></span></div></article></div></div></section>
+<section class="section"><div class="container"><div class="mission-banner"><div><h2>Be part of a more thoughtful food system.</h2><p>Explore the prototype, try a demo form, or share feedback to help us improve the concept.</p></div><a class="btn" href="#survey">Share your feedback <span aria-hidden="true">→</span></a></div></div></section>
+
 <section class="section soft" id="help"><div class="container formwrap"><div class="sectionhead"><span class="kicker">04 · Get support</span><h2>Food support request</h2><p>Try the request journey with sample information.</p></div><div class="formcard">
 <div class="notice" id="backendNotice">🔒 <strong>Prototype notice:</strong> This is a college demo, not an emergency service. Do not enter private or sensitive information. Listings are shared through the project's community database.</div>
 <form id="helpForm"><div class="formgrid"><div class="field"><label for="helpName">Name or nickname *</label><input id="helpName" maxlength="60" required placeholder="e.g. Sample user"></div><div class="field"><label for="helpArea">Area / locality *</label><input id="helpArea" maxlength="80" required placeholder="e.g. Campus area"></div><div class="field"><label for="helpPeople">People needing support</label><select id="helpPeople"><option>1 person</option><option>2–3 people</option><option>4–6 people</option><option>7+ people</option></select></div><div class="field"><label for="helpFood">Type of support</label><select id="helpFood"><option>Cooked meals</option><option>Groceries</option><option>Fruits and vegetables</option><option>Packaged food</option><option>Other</option></select></div></div><button class="btn" type="submit">Submit food request →</button></form><div class="result" id="helpResult" role="status" aria-live="polite"></div></div></div></section>
@@ -88,6 +136,7 @@ html{scroll-behavior:smooth}
 <section class="section soft"><div class="container"><div class="sectionhead"><span class="kicker">FAQs</span><h2>What this prototype can—and cannot—do.</h2></div><div class="faq"><details><summary>Are these real food donations or requests?</summary><p>Entries are stored in the project's shared database when the backend is connected, but this student prototype does not notify food banks, NGOs, donors or people seeking support. Treat entries as test data, not verified real-world requests.</p></details><details><summary>Will entries appear on another person's device?</summary><p>When the Supabase backend is connected, community listings can appear across devices. Local demo data and notification read/unread markers remain browser-specific.</p></details><details><summary>How does this relate to Design Thinking?</summary><p>The page presents the problem, a defined user need, a proposed solution, working prototype journeys and a feedback form. Feedback can inform future improvements.</p></details><details><summary>What would be needed before a real launch?</summary><p>Partnerships with verified organisations, safe-food handling rules, secure data storage, location-aware matching, moderation, and a process for confirming and completing requests.</p></details></div></div></section>
 </main>
 <footer class="footer"><div class="container"><div class="footergrid"><div><a class="brand" href="#home" style="color:white"><span class="brandmark">SM</span><span>Share a Meal<small style="color:#bbd1c1">Zero Hunger · Design Thinking</small></span></a><p>A student-built concept exploring responsible food sharing, community support and the United Nations Sustainable Development Goal 2: Zero Hunger.</p></div><div><strong>Explore</strong><p><a href="#problem">The problem</a><br><a href="#how">How it works</a><br><a href="#board">Community board</a><br><a href="#survey">User feedback</a></p></div></div><div class="footbottom"><span>© <span id="year"></span> Share a Meal · Student project prototype</span><span>Demo only · No real-world food service is provided</span></div></div></footer>
+<a class="floating-mission" href="#donate" aria-label="Jump to share food form">🥗 <span>Share Food</span> <span aria-hidden="true">↗</span></a>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 (()=> {
@@ -99,9 +148,15 @@ const progressBar=progress.firstElementChild;const nav=document.querySelector('.
 let scrollTick=false;
 const updateScrollEffects=()=>{const max=document.documentElement.scrollHeight-window.innerHeight;progressBar.style.transform='scaleX('+(max>0?Math.min(1,window.scrollY/max):0)+')';if(nav)nav.classList.toggle('is-scrolled',window.scrollY>12);scrollTick=false};
 window.addEventListener('scroll',()=>{if(!scrollTick){requestAnimationFrame(updateScrollEffects);scrollTick=true}},{passive:true});window.addEventListener('resize',updateScrollEffects);updateScrollEffects();
-const revealTargets=document.querySelectorAll('.sectionhead,.grid3 > *, .journey > *, .steps > *, .stats > *, .impactbox, .formcard, .board, .heroCopy, .artpanel, .problem-card, .feature-card, footer .container');
+const revealTargets=document.querySelectorAll('.sectionhead,.grid3 > *, .journey > *, .steps > *, .stats > *, .impact-metric, .rescue-card, .story-card, .mission-banner, .formcard, .board, .heroCopy, .artpanel, .problem-card, .feature-card, footer .container');
 revealTargets.forEach((el,index)=>{el.classList.add('scroll-reveal');if(el.matches('.heroCopy'))el.classList.add('from-left');else if(el.matches('.artpanel'))el.classList.add('from-right');else if(el.matches('.stats > *'))el.classList.add('pop-in');el.style.setProperty('--reveal-delay',(index%4)*105+'ms')});
 if('IntersectionObserver' in window){const revealObserver=new IntersectionObserver((items,observer)=>{items.forEach(item=>{if(item.isIntersecting){item.target.classList.add('is-visible');observer.unobserve(item.target)}})},{threshold:.14,rootMargin:'0px 0px -45px 0px'});revealTargets.forEach(el=>revealObserver.observe(el))}else{revealTargets.forEach(el=>el.classList.add('is-visible'))}
+
+
+/* Count up the project-design metrics once, respecting reduced-motion settings. */
+const countTargets=document.querySelectorAll('[data-count-to]');
+const runCounter=el=>{if(el.dataset.counted)return;el.dataset.counted='true';const target=Number(el.dataset.countTo)||0;if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=String(target);return}const start=performance.now(),duration=850;const tick=now=>{const p=Math.min(1,(now-start)/duration);el.textContent=String(Math.round(target*(1-Math.pow(1-p,3))));if(p<1)requestAnimationFrame(tick)};requestAnimationFrame(tick)};
+if('IntersectionObserver' in window){const countObserver=new IntersectionObserver(items=>items.forEach(item=>{if(item.isIntersecting){runCounter(item.target);countObserver.unobserve(item.target)}}),{threshold:.5});countTargets.forEach(el=>countObserver.observe(el))}else countTargets.forEach(runCounter);
 
 const STORE='shareAMealPrototype_v2';
 const SUPABASE_URL='https://zjjvrephptjvivcdifda.supabase.co';
