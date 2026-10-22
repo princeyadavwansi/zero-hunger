@@ -133,6 +133,83 @@ body:not(.admin-standalone) #admin-dashboard{display:none!important}
 @media(max-width:700px){.hero-photo-card{height:440px;min-height:420px;border-radius:20px}.photo-label{top:14px;left:14px;font-size:.59rem;padding:9px 11px}.photo-message{left:22px;bottom:105px}.photo-message h2{font-size:3.1rem}.photo-corner-note{left:12px;right:12px;bottom:12px}.heroart{max-width:520px}}
 @media(prefers-reduced-motion:reduce){.hero-children-photo,.hero-photo-card:hover .hero-children-photo{transition:none;transform:none}}
 
+
+/* Colourful, photo-first website refresh — retain all forms and app behaviour */
+.hero{padding:54px 0 62px;background:radial-gradient(circle at 8% 20%,#d9f5e5 0,transparent 30%),radial-gradient(circle at 78% 10%,#fff0c8 0,transparent 26%),linear-gradient(125deg,#f8fff9,#fff8ed 60%,#f4f0ff);border-bottom:0}
+.herogrid{gap:clamp(28px,5vw,66px)}
+.hero h1{font-size:clamp(2.8rem,5.2vw,4.7rem);color:#163d2a}
+.hero h1 em{color:#ef7652}
+.hero .eyebrow{color:#18744b;background:#fff;border:1px solid #d9efdf;border-radius:999px;padding:8px 13px;letter-spacing:.08em}
+.hero .eyebrow span{background:#ff9d4d;box-shadow:0 0 0 4px #ff9d4d24}
+.hero .btn{border-radius:999px;background:#18744b;border-color:#18744b;box-shadow:0 9px 20px #18744b24;padding:13px 21px}
+.hero .btn.secondary{background:#fff;color:#263f30;border-color:#d9e7dc;box-shadow:none}
+.hero-photo-card{height:clamp(430px,43vw,560px);min-height:420px;border-radius:30px;box-shadow:0 26px 70px #153b2a30;background:#376e4c}
+.hero-children-photo{object-position:center 38%}
+.photo-shade{background:linear-gradient(180deg,rgba(8,31,20,.02) 0%,rgba(8,31,20,.02) 32%,rgba(8,31,20,.88) 100%),linear-gradient(90deg,rgba(8,31,20,.12),transparent 70%)}
+.photo-label{top:18px;left:18px;background:#fff;color:#174a32;border:0;box-shadow:0 9px 25px #102c1c2b}
+.photo-message h2{font-size:clamp(2.7rem,4.4vw,4.25rem)}
+.photo-message h2 em{color:#f7d36b}
+.photo-heart{background:#ffe08a;color:#174a32}
+.floatcard{border-radius:14px;background:#fff;border:1px solid #dfece2;box-shadow:0 12px 30px #183c2b0c}
+.section{padding:66px 0}
+.sectionhead{margin-bottom:30px}
+.sectionhead h2{letter-spacing:-.05em}
+#problem{background:linear-gradient(180deg,#fff 0%,#fff9f0 100%)}
+#problem .card:nth-child(1){background:linear-gradient(145deg,#fff1eb,#fff);border-color:#ffddd1}
+#problem .card:nth-child(2){background:linear-gradient(145deg,#fff7d9,#fff);border-color:#f2e5a8}
+#problem .card:nth-child(3){background:linear-gradient(145deg,#e8f7ff,#fff);border-color:#cce9f6}
+#problem .cardicon{background:#ffffffc9}
+#how{background:linear-gradient(130deg,#eefaf0,#f4f0ff 55%,#fff6e8)}
+#how .card:nth-child(1){background:linear-gradient(145deg,#e5f8e9,#fff);border-color:#ccebd4}
+#how .card:nth-child(2){background:linear-gradient(145deg,#fff0e4,#fff);border-color:#ffddc4}
+#how .card:nth-child(3){background:linear-gradient(145deg,#eee9ff,#fff);border-color:#dcd2ff}
+#how .cardicon{background:#ffffffc9}
+.impact-showcase{background:linear-gradient(120deg,#173f75 0%,#3869ae 52%,#7b56b5 100%)}
+.impact-showcase:before,.impact-showcase:after{border-color:#ffffff25}
+.impact-showcase .kicker{color:#ffe39a}
+.impact-metric{border-radius:20px;background:#ffffff13;border-color:#ffffff35}
+.impact-metric strong{color:#ffe39a}
+#food-rescue{background:linear-gradient(145deg,#fff8eb,#f2fbf3)}
+.rescue-grid{gap:22px}
+.rescue-card{min-height:310px;border-radius:24px;border:0;box-shadow:0 14px 38px #193d2510}
+.rescue-card.waste{background:linear-gradient(180deg,#1b253022,#1b2530b5),url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1100&q=85') center/cover;color:#fff}
+.rescue-card.share{background:linear-gradient(180deg,#193f2020,#193f20b5),url('https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1100&q=85') center/cover;color:#fff}
+.rescue-card h3{color:#fff;font-size:1.65rem}
+.rescue-card p{color:#f6fff7}
+.rescue-tag{background:#fff;color:#174a32;border:0}
+.rescue-emoji{filter:none;text-shadow:0 2px 8px #0005}
+#community-stories{background:linear-gradient(135deg,#f3edff,#fff4ec)}
+.story-grid{gap:18px}
+.story-card{border:0;border-radius:20px;box-shadow:0 12px 30px #49326e10}
+.story-card:nth-child(1){background:linear-gradient(145deg,#fff0e8,#fff)}
+.story-card:nth-child(2){background:linear-gradient(145deg,#e9f7ff,#fff)}
+.story-card:nth-child(3){background:linear-gradient(145deg,#edf8e7,#fff)}
+.story-avatar{background:#ffffffd9}
+#help{background:linear-gradient(135deg,#e7f8ec,#e8f5ff)}
+#donate{background:linear-gradient(135deg,#fff0df,#fff8d9)}
+#volunteer{background:linear-gradient(135deg,#eee8ff,#fcecf6)}
+.formcard{border:1px solid #ffffff;border-radius:22px;box-shadow:0 20px 55px #183c2b12}
+.formcard .btn{border-radius:999px}
+.notice{border-radius:12px}
+.field input,.field select,.field textarea{border-radius:10px}
+#board{background:linear-gradient(180deg,#fff 0%,#eefaf3 100%)}
+.stat{border:0;border-radius:18px;box-shadow:0 12px 30px #193d2510}
+.stat:nth-child(1){background:linear-gradient(140deg,#e4f7ff,#fff)}
+.stat:nth-child(2){background:linear-gradient(140deg,#fff0e1,#fff)}
+.stat:nth-child(3){background:linear-gradient(140deg,#eee8ff,#fff)}
+.stat strong{font-size:2.5rem}
+#history{background:linear-gradient(135deg,#fff7e7,#f2f8ff)}
+#survey{background:linear-gradient(135deg,#e9f8ed,#fff0e7)}
+#survey .formcard{border-radius:22px}
+.footer{background:linear-gradient(115deg,#123c2b,#174c69 75%,#44326f)}
+@media(max-width:700px){
+ .hero{padding:38px 0 46px}
+ .hero-photo-card{height:430px;min-height:410px;border-radius:22px}
+ .photo-message h2{font-size:3rem}
+ .section{padding:48px 0}
+ .rescue-card{min-height:270px}
+}
+
 </style>
 </head>
 <body>
@@ -148,7 +225,7 @@ body:not(.admin-standalone) #admin-dashboard{display:none!important}
 <p>Share a Meal is a community-focused concept that explores how people can offer safe surplus food, find support, and volunteer to help reduce food waste.</p>
 <div class="actions"><a class="btn" href="#how">Explore the project <span>→</span></a><a class="btn secondary" href="#problem">Why it matters</a></div>
 <div class="herofoot"><span>🌱 SDG 2: Zero Hunger</span><span>🤝 Community-led concept</span><span>📱 Mobile-friendly demo</span></div></div>
-<div class="heroart"><div class="hero-photo-card"><img class="hero-children-photo" src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1400&q=88" alt="Children together, representing the importance of access to food and community support" fetchpriority="high" onerror="this.style.display='none';this.parentElement.classList.add('photo-fallback')"><div class="photo-shade"></div><div class="photo-label"><span class="photo-dot"></span> EVERY CHILD DESERVES A MEAL</div><div class="photo-message"><span class="photo-kicker">SHARE FOOD · SHARE HOPE</span><h2>Small kindness.<br><em>Big change.</em></h2><p>One meal can make a meaningful difference.</p></div><div class="photo-corner-note"><span class="photo-heart">♥</span><span><strong>Be part of the change</strong><small>Give what you can. Help where you can.</small></span></div></div><div class="floatcard">OUR SHARED GOAL<small>Every meal and helping hand matters</small></div></div>
+<div class="heroart"><div class="hero-photo-card"><img class="hero-children-photo" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1400&q=90" alt="Children together, representing the importance of access to food and community support" fetchpriority="high" onerror="this.style.display='none';this.parentElement.classList.add('photo-fallback')"><div class="photo-shade"></div><div class="photo-label"><span class="photo-dot"></span> EVERY CHILD DESERVES A MEAL</div><div class="photo-message"><span class="photo-kicker">SHARE FOOD · SHARE HOPE</span><h2>Small kindness.<br><em>Big change.</em></h2><p>One meal can make a meaningful difference.</p></div><div class="photo-corner-note"><span class="photo-heart">♥</span><span><strong>Be part of the change</strong><small>Give what you can. Help where you can.</small></span></div></div><div class="floatcard">OUR SHARED GOAL<small>Every meal and helping hand matters</small></div></div>
 </div></header>
 <main>
 <section class="section" id="problem"><div class="container"><div class="sectionhead"><span class="kicker">01 · Understand</span><h2>Two problems. One community opportunity.</h2><p>Food insecurity and avoidable food waste can exist side by side. Our concept explores a safer, simpler way to connect people and resources.</p></div>
