@@ -225,7 +225,7 @@ body:not(.admin-standalone) #admin-dashboard{display:none!important}
 <p>Share a Meal is a community-focused concept that explores how people can offer safe surplus food, find support, and volunteer to help reduce food waste.</p>
 <div class="actions"><a class="btn" href="#how">Explore the project <span>→</span></a><a class="btn secondary" href="#problem">Why it matters</a></div>
 <div class="herofoot"><span>🌱 SDG 2: Zero Hunger</span><span>🤝 Community-led concept</span><span>📱 Mobile-friendly demo</span></div></div>
-<div class="heroart"><div class="hero-photo-card"><img class="hero-children-photo" src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1400&q=90" alt="Community food sharing and meal support" fetchpriority="high" onerror="this.style.display='none';this.parentElement.classList.add('photo-fallback')"><div class="photo-shade"></div><div class="photo-label"><span class="photo-dot"></span> EVERY CHILD DESERVES A MEAL</div><div class="photo-message"><span class="photo-kicker">SHARE FOOD · SHARE HOPE</span><h2>Small kindness.<br><em>Big change.</em></h2><p>One meal can make a meaningful difference.</p></div><div class="photo-corner-note"><span class="photo-heart">♥</span><span><strong>Be part of the change</strong><small>Give what you can. Help where you can.</small></span></div></div><div class="floatcard">OUR SHARED GOAL<small>Every meal and helping hand matters</small></div></div>
+<div class="heroart"><div class="hero-photo-card"><img class="hero-children-photo" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=90" alt="Community food sharing and meal support" fetchpriority="high" onerror="this.style.display='none';this.parentElement.classList.add('photo-fallback')"><div class="photo-shade"></div><div class="photo-label"><span class="photo-dot"></span> EVERY CHILD DESERVES A MEAL</div><div class="photo-message"><span class="photo-kicker">SHARE FOOD · SHARE HOPE</span><h2>Small kindness.<br><em>Big change.</em></h2><p>One meal can make a meaningful difference.</p></div><div class="photo-corner-note"><span class="photo-heart">♥</span><span><strong>Be part of the change</strong><small>Give what you can. Help where you can.</small></span></div></div><div class="floatcard">OUR SHARED GOAL<small>Every meal and helping hand matters</small></div></div>
 </div></header>
 <main>
 <section class="section" id="problem"><div class="container"><div class="sectionhead"><span class="kicker">01 · Understand</span><h2>Two problems. One community opportunity.</h2><p>Food insecurity and avoidable food waste can exist side by side. Our concept explores a safer, simpler way to connect people and resources.</p></div>
@@ -335,3 +335,31 @@ if(adminSession?.access_token&&adminSession.user?.app_metadata?.role==='admin'){
 </script>
 </body>
 </html>
+<style>
+
+/* NGO-inspired full-width hero matching the reference style */
+@media(min-width:701px){
+  .hero{padding:28px 0 34px!important;background:#f3f6f3!important}
+  .hero .container,.hero .wrap{max-width:1240px}
+  .herogrid{display:block!important;position:relative!important}
+  .herogrid>.herocopy{display:none!important}
+  .heroart{width:100%!important;min-width:0!important}
+  .hero-photo-card{height:clamp(500px,52vw,650px)!important;min-height:500px!important;border-radius:18px!important}
+}
+@media(max-width:700px){
+  .hero{padding:12px 0 24px!important;background:#f3f6f3!important}
+  .herogrid{display:block!important}
+  .herogrid>.herocopy{display:none!important}
+  .heroart{width:100%!important;min-width:0!important}
+  .hero-photo-card{height:500px!important;min-height:500px!important;border-radius:0 0 18px 18px!important}
+  .photo-message h2{font-size:clamp(2.4rem,11vw,3.5rem)!important}
+  .photo-shade{background:linear-gradient(180deg,rgba(6,20,36,.15) 0%,rgba(6,20,36,.12) 30%,rgba(6,20,36,.88) 100%)!important}
+}
+.hero-photo-card{background:#10263b!important}
+.hero-children-photo{object-position:center 30%!important}
+.photo-label{top:18px!important;left:18px!important}
+.photo-message h2 em{color:#27c1d1!important}
+.photo-kicker{color:#69e0e5!important}
+.photo-corner-note{background:rgba(9,25,42,.82)!important;border:1px solid #ffffff30!important}
+
+</style>
