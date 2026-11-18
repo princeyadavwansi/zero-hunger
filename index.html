@@ -268,6 +268,32 @@ body{background:#fff;color:var(--ink)}.container{width:min(1200px,92%)}
 @media(max-width:700px){#admin-dashboard .formcard{border-radius:17px}#admin-dashboard .btn{width:100%}}
 @media(prefers-reduced-motion:reduce){#admin-dashboard,#admin-dashboard:before,#admin-dashboard:after,#admin-dashboard .sectionhead,#admin-dashboard .formcard,#admin-dashboard .formcard:before{animation:none!important}#admin-dashboard .btn,#admin-dashboard .field input{transition:none!important}}
 
+
+/* Admin dashboard button contrast fix */
+#admin-dashboard .boardtools .actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+#admin-dashboard .boardtools .actions .btn,
+#admin-dashboard .admin-actions .btn{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  background:linear-gradient(115deg,#124d34 0%,#16764c 55%,#21885b 100%)!important;
+  border:1px solid #176344!important;
+  font-weight:800!important;
+  letter-spacing:.01em;
+  text-shadow:0 1px 1px rgba(0,0,0,.14);
+  box-shadow:0 7px 18px rgba(16,75,53,.2)!important;
+}
+#admin-dashboard .boardtools .actions .btn:hover,
+#admin-dashboard .admin-actions .btn:hover{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  background:linear-gradient(115deg,#0b3e29 0%,#105e3c 100%)!important;
+  transform:translateY(-2px);
+  box-shadow:0 11px 24px rgba(16,75,53,.28)!important;
+}
+#admin-dashboard .boardtools .actions .btn:focus-visible,
+#admin-dashboard .admin-actions .btn:focus-visible{outline:3px solid #e8bd55;outline-offset:3px}
+@media(max-width:520px){#admin-dashboard .boardtools .actions{width:100%}#admin-dashboard .boardtools .actions .btn{flex:1}}
+
 </style></head>
 <body>
 
