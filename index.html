@@ -213,6 +213,84 @@ body.admin-login-open:not(.admin-mode) #adminPanel{display:none!important}
  .rescue-card{min-height:270px}
 }
 
+
+
+/* Premium background atmosphere — forest emerald & champagne */
+:root{
+  --green:#0b4936;
+  --green-dark:#072f25;
+  --green-soft:#e9efe7;
+  --gold:#d5b66f;
+  --paper:#f7f4eb;
+  --canvas:#f0eee4;
+  --ink:#17372b;
+  --muted:#68776e;
+}
+html{background:#f7f4eb}
+body{
+  background:
+    radial-gradient(ellipse at 8% 8%,rgba(213,182,111,.13),transparent 28%),
+    radial-gradient(ellipse at 92% 34%,rgba(19,91,65,.08),transparent 32%),
+    linear-gradient(135deg,#f6f3e9 0%,#fbfaf5 48%,#edf1e9 100%) !important;
+  background-attachment:fixed !important;
+}
+.hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 82% 18%,rgba(213,182,111,.22),transparent 29%),
+    radial-gradient(ellipse at 8% 100%,rgba(64,137,99,.30),transparent 38%),
+    linear-gradient(118deg,#082f25 0%,#0d4935 54%,#174f3b 100%) !important;
+  border-bottom:1px solid rgba(213,182,111,.55);
+  box-shadow:inset 0 -1px 0 rgba(255,255,255,.08);
+}
+.hero:before{
+  content:"";
+  position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.12) .7px,transparent .7px);
+  background-size:23px 23px;opacity:.22;
+}
+.hero h1,.hero h1 em{color:#fffaf0 !important}
+.hero h1 em{
+  background:linear-gradient(90deg,#f2d99b,#d5b66f,#fff0c6);
+  -webkit-background-clip:text;background-clip:text;color:transparent !important;
+}
+.hero p,.hero .subtitle,.hero .description{color:rgba(255,250,240,.84) !important}
+.hero .eyebrow,.hero .kicker{
+  color:#f0d99e !important;
+  background:rgba(255,255,255,.08);
+  border-color:rgba(213,182,111,.42);
+}
+.hero .eyebrow span{background:#d5b66f;box-shadow:0 0 0 5px rgba(213,182,111,.16)}
+.hero .btn.secondary{
+  color:#f8f2e4;background:rgba(255,255,255,.08);
+  border:1px solid rgba(240,217,158,.55);
+}
+.section{background:transparent}
+.section.soft{
+  background:
+    radial-gradient(ellipse at 92% 8%,rgba(213,182,111,.12),transparent 30%),
+    linear-gradient(135deg,rgba(232,238,228,.94),rgba(247,244,235,.96)) !important;
+  border-top:1px solid rgba(178,157,103,.15);
+  border-bottom:1px solid rgba(178,157,103,.15);
+}
+.sectionhead h2{color:#103d2e}
+.card,.step,.formcard,.stat,.listing,.faq details{
+  background:linear-gradient(145deg,#fffefa 0%,#f7f3e8 100%);
+  border-color:rgba(185,157,93,.30);
+  box-shadow:0 14px 36px rgba(7,47,37,.075),inset 0 1px 0 rgba(255,255,255,.9);
+}
+.nav{background:rgba(250,248,240,.94)}
+footer,.footer{
+  background:
+    radial-gradient(ellipse at 78% 0%,rgba(213,182,111,.17),transparent 34%),
+    linear-gradient(125deg,#062a21,#0b4936 68%,#103b30) !important;
+}
+@media(prefers-reduced-motion:no-preference){
+  .hero{background-size:100% 100%;transition:background .4s ease}
+}
+
 </style>
 
 <style>
