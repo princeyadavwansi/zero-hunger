@@ -213,6 +213,104 @@ body.admin-login-open:not(.admin-mode) #adminPanel{display:none!important}
  .rescue-card{min-height:270px}
 }
 
+
+/* === Share a Meal | premium nature & harvest visual system === */
+:root{
+ --green:#123B2A;--green-dark:#102D21;--green-soft:#edf1e9;--ink:#1d3026;--muted:#657268;
+ --line:#e4e2d8;--paper:#FAF7EF;--canvas:#f2f0e7;--gold:#E8B84A;--leaf:#294D3A;
+ --shadow:0 18px 48px rgba(16,45,33,.09);--motion-ease:cubic-bezier(.22,1,.36,1)
+}
+body{background:var(--paper);color:var(--ink);font-family:Inter,"Aptos",Arial,sans-serif}
+.topnote{background:var(--green-dark)}
+.nav{background:rgba(250,247,239,.94);border-bottom:1px solid rgba(18,59,42,.12);backdrop-filter:blur(16px)}
+.nav.is-scrolled{background:rgba(250,247,239,.97);box-shadow:0 10px 30px rgba(16,45,33,.09)}
+.brandmark{background:var(--green);border-radius:13px;color:var(--gold);box-shadow:inset 0 0 0 1px rgba(232,184,74,.35)}
+.links a{color:#344c3e}.links a:hover{color:var(--gold)}
+.links .navcta,.btn{background:var(--green);border-color:var(--green);border-radius:999px;color:#fff;box-shadow:0 8px 22px rgba(18,59,42,.13)}
+.links .navcta:hover,.btn:hover{background:var(--leaf);border-color:var(--leaf);box-shadow:0 12px 26px rgba(18,59,42,.2);transform:translateY(-2px)}
+.btn.secondary{background:transparent;color:var(--green);border:1px solid rgba(18,59,42,.28);box-shadow:none}
+.btn.secondary:hover{background:#e9ecdf;color:var(--green-dark)}
+.hero{position:relative;overflow:hidden;padding:clamp(58px,7vw,100px) 0;background:var(--paper);border-bottom:1px solid var(--line)}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(232,184,74,.2);border-radius:50%;right:-280px;top:-280px;pointer-events:none}
+.herogrid{grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,76px)}
+.eyebrow,.kicker{color:var(--leaf)}
+.eyebrow span{background:var(--gold)}
+.hero h1{color:var(--green);font-size:clamp(2.9rem,5.5vw,5.1rem);letter-spacing:-.065em}
+.hero h1 em{color:#a87919}
+.hero p,.sectionhead p{color:#5e6b60}
+.hero-photo-card{position:relative;min-height:470px;height:100%;overflow:hidden;border-radius:26px;background:var(--green);box-shadow:0 28px 70px rgba(16,45,33,.2)}
+.hero-children-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,45,33,.03) 15%,rgba(16,45,33,.28) 48%,rgba(16,45,33,.88) 100%)}
+.photo-label{position:absolute;top:22px;left:22px;padding:9px 13px;border:1px solid rgba(255,255,255,.45);border-radius:99px;background:rgba(16,45,33,.4);backdrop-filter:blur(10px);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.1em}
+.photo-dot{display:inline-block;width:7px;height:7px;margin-right:7px;border-radius:50%;background:var(--gold)}
+.photo-message{position:absolute;left:clamp(22px,4vw,42px);bottom:clamp(30px,4vw,48px);right:24px;color:white}
+.photo-kicker{font-size:.68rem;letter-spacing:.17em;font-weight:800;color:#f1d58d}
+.photo-message h2{font-size:clamp(2rem,3.5vw,3.3rem);line-height:1.02;letter-spacing:-.055em;margin:12px 0}
+.photo-message h2 em{font-style:normal;color:#f1d58d}
+.photo-message p{color:#f3f2e9;font-size:.94rem}
+.photo-corner-note{position:absolute;right:18px;top:50%;transform:translateY(-10%);display:flex;gap:10px;align-items:center;max-width:210px;padding:13px 15px;border:1px solid rgba(255,255,255,.4);border-radius:15px;background:rgba(250,247,239,.94);color:var(--green);box-shadow:0 12px 28px #102d2133}
+.photo-heart{font-size:1.45rem;color:#a87919}.photo-corner-note strong,.photo-corner-note small{display:block}.photo-corner-note strong{font-size:.76rem}.photo-corner-note small{font-size:.66rem;color:#68746b}
+.floatcard{background:var(--green);border:0;border-radius:14px;color:#fff;padding:15px 18px;box-shadow:0 12px 26px rgba(18,59,42,.13)}
+.floatcard small{color:#e6dfc9}
+.section{padding:clamp(58px,7vw,92px) 0}
+.soft{background:#f0efe6}
+.sectionhead{margin-bottom:42px}
+.sectionhead h2{color:var(--green);font-size:clamp(2rem,3.4vw,3rem);letter-spacing:-.055em}
+.card,.step,.stat,.listing,.formcard,.faq details{border:1px solid #e5e1d5;border-radius:18px;box-shadow:0 10px 28px rgba(16,45,33,.045)}
+.card{padding:29px;background:#fffdf8}
+.card:hover{border-color:#d7c28d;box-shadow:0 18px 36px rgba(16,45,33,.1)}
+.cardicon{background:#f2ead5;color:var(--green);border-radius:14px}
+.card h3,.step h3{color:var(--green)}
+.callout{background:#f2ead5;border-color:#e8d7a9;border-left-color:var(--gold);border-radius:12px}
+.formcard{background:#fffdf8;padding:clamp(22px,4vw,38px)}
+.notice{background:#f5efdf;border-color:#e7d7ad;color:#5e522f;border-radius:12px}
+.field input,.field select,.field textarea,.search,.status-select{border:1px solid #d8d8ca;border-radius:11px;background:#fffefa}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(232,184,74,.2)}
+.stats{gap:17px}.stat{background:#fffdf8;padding:24px}.stat strong{color:var(--green);font-size:2.3rem}
+.filter{border-radius:999px;border-color:#ddd9cb;background:#fffdf8}.filter.active{background:var(--green);border-color:var(--green)}
+.listing{background:#fffdf8;padding:21px}.pill{background:#f2ead5;color:var(--green);border-radius:999px}
+.impact-showcase{background:var(--green-dark)!important}
+.impact-metric{border-radius:18px;background:rgba(250,247,239,.08);border-color:rgba(232,184,74,.25)}
+.impact-metric strong{color:var(--gold)}
+.footer{background:var(--green-dark);padding:54px 0 26px}
+.footer .brandmark{background:#294d3a}.footer a:hover{color:var(--gold)}
+.floating-mission{background:var(--gold);color:var(--green-dark);box-shadow:0 12px 30px rgba(16,45,33,.22)}
+.floating-mission:hover{background:#f0c969}
+.toast{background:var(--green-dark);border:1px solid rgba(232,184,74,.35);border-radius:12px}
+.faq details{background:#fffdf8}.faq summary{color:var(--green)}
+/* Editorial content sections */
+.about-grid,.agriculture-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,82px);align-items:center}
+.about-copy h2,.agriculture-copy h2{font-size:clamp(2rem,3.5vw,3.15rem);line-height:1.12;letter-spacing:-.055em;color:var(--green);margin:13px 0 20px}
+.about-copy p,.agriculture-copy p{color:#5e6b60;line-height:1.85}
+.text-link{display:inline-flex;gap:10px;align-items:center;margin-top:13px;color:#876216;font-weight:800;text-decoration:none;border-bottom:1px solid #d8bd78;padding-bottom:5px}
+.text-link:hover{color:var(--green);border-color:var(--green)}
+.about-visual,.agriculture-image{position:relative;min-height:390px;border-radius:24px;overflow:hidden;background:#dce3d6;box-shadow:var(--shadow)}
+.about-visual img,.agriculture-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.image-caption{position:absolute;left:18px;right:18px;bottom:18px;display:flex;align-items:center;gap:13px;padding:15px 17px;border-radius:15px;background:rgba(250,247,239,.94);backdrop-filter:blur(10px);color:var(--green)}
+.caption-mark{font-size:1.8rem;font-weight:900;color:#a87919}.image-caption strong,.image-caption small{display:block}.image-caption small{color:#68746b;font-size:.75rem}
+.causes-section{background:#fffdf8}
+.cause-solution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.insight-card{position:relative;padding:27px;border:1px solid #e5e1d5;border-radius:18px;background:var(--paper);transition:transform .35s var(--motion-ease),box-shadow .35s var(--motion-ease)}
+.insight-card:hover{transform:translateY(-6px);box-shadow:0 20px 42px rgba(16,45,33,.1)}
+.insight-number{position:absolute;right:22px;top:19px;font-size:.76rem;font-weight:900;letter-spacing:.1em;color:#b18a37}
+.insight-icon{width:52px;height:52px;display:grid;place-items:center;border-radius:15px;background:#f1ead8;font-size:1.5rem}
+.insight-card h3{color:var(--green);margin:20px 0 9px;font-size:1.12rem}
+.insight-card p{color:#657268;font-size:.9rem;line-height:1.8;min-height:104px}
+.insight-foot{border-top:1px solid #e5e1d5;padding-top:13px;color:#876216;font-size:.77rem;font-weight:800}
+.solution-band{display:flex;justify-content:space-between;align-items:center;gap:25px;margin-top:22px;padding:clamp(23px,4vw,36px);border-radius:20px;background:var(--green);color:#fff}
+.solution-band .kicker{color:var(--gold)}.solution-band h3{font-size:clamp(1.3rem,2.5vw,1.9rem);margin:8px 0;color:#fff;letter-spacing:-.035em}.solution-band p{margin:0;color:#e2e8df;max-width:650px;font-size:.9rem}
+.solution-band .btn{flex-shrink:0;background:var(--gold);border-color:var(--gold);color:var(--green-dark);box-shadow:none}
+.agriculture-section{background:#eeefe5}
+.agriculture-copy ul{padding-left:20px;color:#4f6255;line-height:2}.agriculture-copy li::marker{color:#b58a2b}
+.agriculture-image{min-height:440px}
+/* Accessible motion and responsive refinements */
+.reveal-ready .reveal{opacity:0;transform:translateY(24px);transition:opacity .75s var(--motion-ease),transform .75s var(--motion-ease)}
+.reveal-ready .reveal.in-view{opacity:1;transform:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(max-width:900px){.herogrid{gap:30px}.hero-photo-card{min-height:420px}.cause-solution-grid{grid-template-columns:1fr 1fr}.insight-card p{min-height:0}}
+@media(max-width:700px){.herogrid,.about-grid,.agriculture-grid{grid-template-columns:1fr}.hero-photo-card{min-height:390px}.photo-corner-note{right:12px;top:58%}.about-visual,.agriculture-image{min-height:300px}.cause-solution-grid{grid-template-columns:1fr}.solution-band{align-items:flex-start;flex-direction:column}.sectionhead{text-align:left}.sectionhead p{max-width:620px}.floating-mission{right:12px;bottom:12px}}
+@media(prefers-reduced-motion:reduce){.reveal-ready .reveal,.reveal-ready .reveal.in-view{opacity:1;transform:none;transition:none}.insight-card{transition:none}}
+
 </style>
 
 <style>
@@ -352,6 +450,9 @@ body{background:linear-gradient(180deg,#fff 0%,#fbfffc 45%,#fffdf8 100%)}
 </div></header>
 <main>
 
+<section class="section about-section" id="about"><div class="container about-grid"><div class="about-copy"><span class="kicker">SDG 02 · United Nations</span><h2>Zero Hunger is about more than food. It is about dignity, opportunity and a sustainable future.</h2><p>Zero Hunger is the second United Nations Sustainable Development Goal. It calls for ending hunger, improving nutrition, ensuring food security and promoting sustainable agriculture.</p><p><strong>Share a Meal</strong> turns that global ambition into a local community concept: helping people offer surplus food, request support and volunteer responsibly.</p><a class="text-link" href="https://sdgs.un.org/goals/goal2" target="_blank" rel="noopener noreferrer">Explore UN Sustainable Development Goal 2 <span aria-hidden="true">↗</span></a></div><div class="about-visual"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85" alt="Sunlit green agricultural fields and crops" loading="lazy"><div class="image-caption"><span class="caption-mark">02</span><span><strong>End hunger. Achieve food security.</strong><small>Build resilient, sustainable food systems.</small></span></div></div></div></section>
+<section class="section causes-section" id="causes"><div class="container"><div class="sectionhead"><span class="kicker">Understand the challenge</span><h2>Why food insecurity happens—and what can help.</h2><p>Hunger is shaped by connected social, economic and environmental factors. Meaningful solutions must address both access to food and the systems that produce it.</p></div><div class="cause-solution-grid"><article class="insight-card"><span class="insight-number">01</span><div class="insight-icon">🌦</div><h3>Climate and crop disruption</h3><p>Droughts, floods and changing weather can damage harvests, disrupt supply and raise food prices.</p><div class="insight-foot">A more resilient food system</div></article><article class="insight-card"><span class="insight-number">02</span><div class="insight-icon">🚚</div><h3>Unequal access and distribution</h3><p>Food may be available in one place while families elsewhere struggle with affordability, transport or access.</p><div class="insight-foot">Fairer access to nutritious food</div></article><article class="insight-card"><span class="insight-number">03</span><div class="insight-icon">♻</div><h3>Food loss and waste</h3><p>Food can be lost during harvesting, storage and transport, or wasted by retailers and households.</p><div class="insight-foot">Prevent waste and share safely</div></article></div><div class="solution-band"><div><span class="kicker">From awareness to action</span><h3>Small community actions can support bigger solutions.</h3><p>Grow sustainably, reduce avoidable waste, strengthen local partnerships and make nutritious food easier to access.</p></div><a class="btn" href="#how">Explore how to take part <span aria-hidden="true">→</span></a></div></div></section>
+<section class="section agriculture-section" id="agriculture"><div class="container agriculture-grid"><div class="agriculture-image"><img src="https://images.unsplash.com/photo-1499529112087-3cb3b73ち?auto=format&fit=crop&w=1200&q=85" alt="Sustainable farming and fresh green crops" loading="lazy"></div><div class="agriculture-copy"><span class="kicker">Grow a better future</span><h2>Sustainable agriculture starts with caring for the land.</h2><p>Healthy soil, responsible water use, biodiversity and climate-resilient farming help communities produce food while protecting natural resources for future generations.</p><ul><li>Protect soil health and biodiversity</li><li>Use water and farm inputs responsibly</li><li>Support local growers and seasonal food</li><li>Reduce losses through better storage and planning</li></ul><a class="text-link" href="https://www.fao.org/sustainable-development-goals/overview/fao-and-the-2030-agenda-for-sustainable-development/goal-2/en/" target="_blank" rel="noopener noreferrer">Learn about SDG 2 and food systems <span aria-hidden="true">↗</span></a></div></div></section>
 <section class="section soft" id="how"><div class="container"><div class="sectionhead"><span class="kicker">Our concept</span><h2>Three simple ways to take part.</h2><p>Choose the journey that fits you. Each form below adds an entry to the shared community board database.</p></div>
 <div class="journey"><article class="card"><div class="cardicon">💚</div><h3>Find food support</h3><p>Record a sample request for meals or groceries and see it appear on the prototype board.</p><a class="btn" href="#help">Request support →</a></article><article class="card"><div class="cardicon">🥘</div><h3>Share extra food</h3><p>List the type and quantity of food you may be able to offer. Real donations require coordination and safety checks.</p><a class="btn" href="#donate">Add a food offer →</a></article><article class="card"><div class="cardicon">🙌</div><h3>Volunteer your time</h3><p>Register interest in awareness, research, food collection planning or website testing.</p><a class="btn" href="#volunteer">Join the project →</a></article></div></div></section>
 
@@ -483,6 +584,18 @@ if(adminSession?.access_token&&adminSession.user?.app_metadata?.role==='admin'){
    },{threshold:.2});
    observer.observe(panel);
  }else start();
+})();
+</script>
+<script>
+(function(){
+ const targets=document.querySelectorAll('.sectionhead,.journey .card,.about-copy,.about-visual,.insight-card,.solution-band,.agriculture-copy,.agriculture-image,.formcard,.stat,.impact-metric');
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ document.documentElement.classList.add('reveal-ready');
+ targets.forEach((el,i)=>{el.classList.add('reveal');el.style.transitionDelay=(i%3)*75+'ms'});
+ if('IntersectionObserver' in window){
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');observer.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -35px 0px'});
+  targets.forEach(el=>observer.observe(el));
+ }else targets.forEach(el=>el.classList.add('in-view'));
 })();
 </script>
 </body>
