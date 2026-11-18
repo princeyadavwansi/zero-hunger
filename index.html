@@ -7,7 +7,7 @@
 <meta name="description" content="Share a Meal is a student Design Thinking prototype exploring how communities can share safe surplus food and connect people with food support.">
 <title>Share a Meal — Zero Hunger</title>
 <style>
-:root{--green:#176344;--green-dark:#104b35;--green-soft:#edf5ef;--ink:#182b22;--muted:#607067;--line:#dbe5dd;--paper:#fff;--canvas:#f8faf8;--gold:#e7b94f;--shadow:0 12px 32px rgba(19,55,36,.07)}
+:root{--green:#123B2A;--green-dark:#102D21;--green-soft:#EAF0E9;--ink:#183328;--muted:#65746A;--line:#DDE3D8;--paper:#FAF7EF;--canvas:#F2EFE5;--gold:#E8B84A;--shadow:0 16px 42px rgba(16,45,33,.10);--leaf:#294D3A}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Inter,Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit}button,input,select,textarea{font:inherit}button{cursor:pointer}.container{width:min(1160px,90%);margin-inline:auto}
 #account{display:none!important}.topnote{background:var(--green-dark);color:#fff;text-align:center;padding:8px 14px;font-size:.78rem;letter-spacing:.025em}
 .nav{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}.navinner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800;font-size:1.1rem;letter-spacing:-.025em}.brandmark{width:42px;height:42px;border-radius:9px;background:var(--green);color:#fff;display:grid;place-items:center;font-size:1rem;font-weight:900;letter-spacing:-.05em}.brand small{display:block;color:var(--muted);font-weight:500;font-size:.69rem;letter-spacing:.015em}.links{display:flex;align-items:center;gap:clamp(12px,1.35vw,22px);white-space:nowrap}.links a{text-decoration:none;color:#3c5145;font-size:.84rem;font-weight:700;letter-spacing:-.01em}.links a:hover{color:var(--green)}.links .navcta{background:var(--green);color:white;padding:12px 18px;border-radius:10px;box-shadow:0 8px 20px rgba(23,99,68,.16)}.links .navcta:hover{background:#24543b;color:#fff;transform:translateY(-2px)}.menu{display:none;border:1px solid var(--line);background:white;border-radius:7px;padding:9px 12px;color:var(--ink)}
@@ -311,6 +311,97 @@ body{background:var(--paper);color:var(--ink);font-family:Inter,"Aptos",Arial,sa
 @media(max-width:700px){.herogrid,.about-grid,.agriculture-grid{grid-template-columns:1fr}.hero-photo-card{min-height:390px}.photo-corner-note{right:12px;top:58%}.about-visual,.agriculture-image{min-height:300px}.cause-solution-grid{grid-template-columns:1fr}.solution-band{align-items:flex-start;flex-direction:column}.sectionhead{text-align:left}.sectionhead p{max-width:620px}.floating-mission{right:12px;bottom:12px}}
 @media(prefers-reduced-motion:reduce){.reveal-ready .reveal,.reveal-ready .reveal.in-view{opacity:1;transform:none;transition:none}.insight-card{transition:none}}
 
+
+/* Nature + luxury visual system */
+:root{--green:#123B2A;--green-dark:#102D21;--green-soft:#EAF0E9;--leaf:#294D3A;--gold:#E8B84A;--paper:#FAF7EF;--canvas:#F2EFE5;--ink:#183328;--muted:#65746A;--line:#DDE3D8;--shadow:0 16px 42px rgba(16,45,33,.10)}
+body{background:var(--paper);color:var(--ink);font-family:Inter,"Aptos",Arial,sans-serif}
+.topnote{background:var(--green-dark)}
+.nav{background:rgba(250,247,239,.97);border-bottom-color:#e5e0d3;backdrop-filter:blur(14px)}
+.brandmark{background:var(--green);color:var(--gold);border-radius:12px;box-shadow:inset 0 0 0 1px #ffffff26}
+.brand small{color:#738076}
+.links a{color:var(--leaf)}
+.links .navcta,.btn{background:var(--green);border-color:var(--green);border-radius:999px}
+.links .navcta:hover,.btn:hover{background:#294D3A;border-color:#294D3A}
+.hero{background:var(--paper);border-bottom:1px solid var(--line);padding:82px 0 88px}
+.hero h1{color:var(--green-dark);letter-spacing:-.055em}
+.hero h1 em{color:#9a7020}
+.hero p{color:#5c6a60}
+.eyebrow,.kicker{color:#84631c}
+.eyebrow span{background:var(--gold)}
+.hero-photo-card{border-radius:18px;box-shadow:0 24px 60px rgba(16,45,33,.18)}
+.photo-label{background:rgba(16,45,33,.88)}
+.photo-message h2 em{color:var(--gold)}
+.floatcard{background:#f0ead9;border-color:#e7dcc0;color:var(--green-dark);border-radius:12px}
+.section{padding:88px 0}
+.soft{background:var(--canvas)}
+.sectionhead h2,.sectionhead p{color:var(--ink)}
+.sectionhead h2{letter-spacing:-.04em}
+.card,.formcard,.stat,.listing,.step,.faq details{border-radius:16px;border-color:var(--line);box-shadow:0 8px 26px rgba(16,45,33,.045)}
+.card{padding:28px;background:#fffdf8}
+.cardicon{background:#f2ecd9;color:var(--green);border-radius:13px}
+.card h3{color:var(--green-dark)}
+.card:hover{border-color:#c7b77f;box-shadow:0 18px 38px rgba(16,45,33,.10)}
+.btn.secondary{background:transparent;color:var(--green);border-color:#b9c7bb}
+.btn.secondary:hover{background:#eaf0e9}
+.formcard{background:#fffdf8}
+.notice{background:#f5f0df;border-color:#e7dbb8;color:#5d522f;border-radius:12px}
+.field input,.field select,.field textarea,.search,.status-select{border-radius:10px;border-color:#cdd5ca;background:#fffefb}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px #e8b84a35}
+.result,.callout{background:#edf2e9;border-color:#d7e1d5;color:var(--green-dark);border-radius:12px}
+.stat strong,.pill{color:var(--green)}
+.filter{border-radius:999px}
+.filter.active{background:var(--green);border-color:var(--green)}
+.impactbox{background:var(--green-dark);border-radius:18px}
+.footer{background:var(--green-dark)}
+.footer a:hover{color:var(--gold)}
+.floating-mission{background:var(--gold);color:var(--green-dark);border-radius:999px}
+.scroll-progress span{background:var(--gold);box-shadow:none}
+.intro-section{background:var(--paper)}
+.editorial-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.editorial-copy h2,.agriculture-copy h2,.impact-heading h2{font-size:clamp(2rem,3.8vw,3.1rem);line-height:1.12;letter-spacing:-.05em;color:var(--green-dark);margin:14px 0 18px}
+.editorial-copy>p,.agriculture-copy>p,.impact-heading p{color:var(--muted);line-height:1.85}
+.editorial-note{border-left:3px solid var(--gold);padding:13px 18px;background:#f2efe5;margin:24px 0}
+.text-link{display:inline-flex;gap:10px;align-items:center;margin-top:8px;color:var(--green);font-weight:800;text-decoration:none}
+.text-link:hover{color:#8a671e;gap:15px}
+.editorial-image,.agriculture-photo{position:relative;min-height:430px;border-radius:18px;overflow:hidden;background-size:cover;background-position:center;box-shadow:var(--shadow)}
+.about-image{background-image:linear-gradient(0deg,rgba(16,45,33,.58),rgba(16,45,33,0) 62%),url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=85")}
+.image-caption{position:absolute;left:30px;bottom:28px;color:#fff}
+.image-caption span{display:inline-block;color:var(--gold);font-size:.76rem;font-weight:900;letter-spacing:.15em;margin-bottom:10px}
+.image-caption strong{display:block;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.05;letter-spacing:-.04em}
+.causes-section{background:#fffdf8}
+.editorial-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.editorial-card{padding:30px;background:var(--paper);border:1px solid var(--line);border-radius:16px;transition:transform .35s,box-shadow .35s}
+.editorial-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.editorial-number{font-size:.78rem;letter-spacing:.12em;color:#987222;font-weight:900}
+.editorial-card h3{font-size:1.35rem;color:var(--green-dark);margin:18px 0 10px}
+.editorial-card p{font-size:.93rem;color:var(--muted);line-height:1.75}
+.editorial-card strong{color:var(--green);font-size:.82rem;text-transform:uppercase;letter-spacing:.06em}
+.card-rule{height:1px;background:#dfd9c9;margin:22px 0 17px}
+.agriculture-section{background:#e9eee5}
+.agriculture-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.agriculture-photo{background-image:linear-gradient(0deg,rgba(16,45,33,.20),rgba(16,45,33,0)),url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1300&q=85");min-height:510px}
+.photo-stamp{position:absolute;right:24px;top:24px;border:1px solid #fff9;background:#123b2add;color:#fff;padding:14px 17px;border-radius:50%;font-size:.72rem;font-weight:900;letter-spacing:.08em;text-align:center;line-height:1.45}
+.agriculture-points{list-style:none;padding:0;margin:28px 0;display:grid;gap:18px}
+.agriculture-points li{display:flex;gap:15px;align-items:flex-start}
+.agriculture-points li>span{color:#96701f;font-weight:900;font-size:.8rem;padding-top:3px}
+.agriculture-points strong{display:block;color:var(--green-dark)}
+.agriculture-points small{display:block;color:var(--muted);margin-top:4px;line-height:1.6}
+.impact-section{background:var(--green-dark);color:#fff}
+.impact-heading{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.impact-heading h2{color:#fff;margin-bottom:10px}
+.impact-heading p{color:#d6e0d8;margin:0}
+.impact-heading .kicker{color:var(--gold)}
+.impact-seal{width:76px;height:76px;border:1px solid #e8b84a88;border-radius:50%;display:grid;place-content:center;text-align:center;color:var(--gold);font-size:.65rem;letter-spacing:.1em;line-height:1.1;flex:none}
+.impact-seal b{font-size:1.3rem}
+.impact-counters{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ffffff30;margin-top:36px;border:1px solid #ffffff30;border-radius:16px;overflow:hidden}
+.impact-counters article{background:#173f2e;padding:30px;text-align:center;display:grid;gap:8px}
+.counter-value{font-size:clamp(2.7rem,5vw,4rem);font-weight:800;letter-spacing:-.06em;color:var(--gold);line-height:1}
+.impact-counters article>span:last-child{color:#e2e9e2;font-size:.9rem}
+.impact-disclaimer{color:#c5d3c9;text-align:center;font-size:.78rem;margin:18px 0 0}
+@media(max-width:800px){.editorial-grid,.agriculture-grid{grid-template-columns:1fr;gap:32px}.editorial-image,.agriculture-photo{min-height:330px}.editorial-cards{grid-template-columns:1fr}.section{padding:66px 0}}
+@media(max-width:700px){.impact-heading{align-items:flex-start}.impact-counters{grid-template-columns:1fr}.impact-counters article{padding:22px}.hero{padding:56px 0}.editorial-image,.agriculture-photo{min-height:280px}}
+@media(prefers-reduced-motion:reduce){.editorial-card,.text-link{transition:none}}
+
 </style>
 
 <style>
@@ -438,7 +529,7 @@ body{background:linear-gradient(180deg,#fff 0%,#fbfffc 45%,#fffdf8 100%)}
 <nav class="nav"><div class="container navinner">
 <a class="brand" href="#home"><span class="brandmark">SM</span><span>Share a Meal<small>Share More. Waste Less.</small></span></a>
 <button class="menu" id="menuBtn" aria-expanded="false" aria-label="Open navigation">☰ Menu</button>
-<div class="links" id="navLinks"><a href="#how">How It Works</a><a href="#help">Get Support</a><a href="#donate">Donate Food</a><a href="#board">Community Board</a><a href="#history">My Activity</a><a href="#contact">Contact</a><a class="navcta" href="#donate">Donate Food <span aria-hidden="true">↗</span></a></div>
+<div class="links" id="navLinks"><a href="#about">About</a><a href="#causes">Causes & Solutions</a><a href="#agriculture">Sustainable Farming</a><a href="#how">Get Involved</a><a href="#board">Community Board</a><a href="#contact">Contact</a><a class="navcta" href="#donate">Donate Food <span aria-hidden="true">↗</span></a></div>
 </div></nav>
 <header class="hero" id="home"><div class="container herogrid">
 <div><span class="eyebrow"><span></span> SMALL ACTIONS. SHARED IMPACT.</span>
@@ -449,6 +540,11 @@ body{background:linear-gradient(180deg,#fff 0%,#fbfffc 45%,#fffdf8 100%)}
 <div class="heroart"><div class="hero-photo-card"><img class="hero-children-photo" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=90" alt="Community food sharing and meal support" fetchpriority="high" onerror="this.style.display='none';this.parentElement.classList.add('photo-fallback')"><div class="photo-shade"></div><div class="photo-label"><span class="photo-dot"></span> EVERY CHILD DESERVES A MEAL</div><div class="photo-message"><span class="photo-kicker">SHARE FOOD · SHARE HOPE</span><h2>Small kindness.<br><em>Big change.</em></h2><p>One meal can make a meaningful difference.</p></div><div class="photo-corner-note"><span class="photo-heart">♥</span><span><strong>Be part of the change</strong><small>Give what you can. Help where you can.</small></span></div></div><div class="floatcard">OUR SHARED GOAL<small>Every meal and helping hand matters</small></div></div>
 </div></header>
 <main>
+
+<section class="section intro-section" id="about"><div class="container editorial-grid"><div class="editorial-copy"><span class="kicker">United Nations · Sustainable Development Goal 2</span><h2>A world where everyone has access to safe, nutritious food.</h2><p>Zero Hunger is about more than ending hunger. It means improving nutrition, supporting sustainable food systems and making sure communities can access food throughout the year.</p><p class="editorial-note">Share a Meal brings this global goal closer to home through a simple idea: connect surplus food, people who need support and volunteers who want to help.</p><a class="text-link" href="#how">Explore how the project works <span aria-hidden="true">→</span></a></div><div class="editorial-image about-image" role="img" aria-label="Fresh vegetables harvested for a healthy food system"><div class="image-caption"><span>SDG 02</span><strong>End hunger.<br>Build food security.</strong></div></div></div></section>
+<section class="section causes-section" id="causes"><div class="container"><div class="sectionhead"><span class="kicker">Understand the challenge</span><h2>Why food insecurity happens — and what can help.</h2><p>Hunger has many connected causes. Lasting progress needs practical action across the food system.</p></div><div class="editorial-cards"><article class="editorial-card"><span class="editorial-number">01</span><h3>Limited access</h3><p>Poverty, unstable income and rising food costs can make nutritious meals difficult to afford.</p><div class="card-rule"></div><strong>What helps</strong><p>Community support, stronger safety nets and better access to affordable nutritious food.</p></article><article class="editorial-card"><span class="editorial-number">02</span><h3>Food loss and waste</h3><p>Food can be lost during harvesting, storage and transport, or wasted by shops and households.</p><div class="card-rule"></div><strong>What helps</strong><p>Better storage, thoughtful planning and safe redistribution of suitable surplus food.</p></article><article class="editorial-card"><span class="editorial-number">03</span><h3>Climate and conflict</h3><p>Droughts, floods, conflict and disrupted supply chains can threaten harvests and food access.</p><div class="card-rule"></div><strong>What helps</strong><p>Resilient farming, local preparedness and support for affected communities.</p></article></div></div></section>
+<section class="section agriculture-section" id="agriculture"><div class="container agriculture-grid"><div class="agriculture-photo" role="img" aria-label="Green agricultural fields and cultivated farmland"><span class="photo-stamp">GROW<br>RESPONSIBLY</span></div><div class="agriculture-copy"><span class="kicker">A more resilient food future</span><h2>Sustainable agriculture starts with caring for the land.</h2><p>Healthy soil, careful water use, crop diversity and climate-aware farming can help protect the resources that food production depends on.</p><ul class="agriculture-points"><li><span>01</span><div><strong>Protect soil health</strong><small>Use practices that maintain soil structure and fertility.</small></div></li><li><span>02</span><div><strong>Use water wisely</strong><small>Choose efficient irrigation and reduce avoidable water loss.</small></div></li><li><span>03</span><div><strong>Support biodiversity</strong><small>Encourage crop diversity and protect beneficial habitats.</small></div></li></ul><a class="btn" href="#volunteer">Get involved <span aria-hidden="true">→</span></a></div></div></section>
+<section class="section impact-section" id="impact"><div class="container"><div class="impact-heading"><div><span class="kicker">Small actions add up</span><h2>Our community activity</h2><p>Live totals from submissions made through this student project prototype.</p></div><span class="impact-seal" aria-hidden="true">SDG<br><b>02</b></span></div><div class="impact-counters"><article><span class="counter-value" id="impactRequests">0</span><span>Support requests</span></article><article><span class="counter-value" id="impactDonations">0</span><span>Food offers</span></article><article><span class="counter-value" id="impactVolunteers">0</span><span>Volunteer interests</span></article></div><p class="impact-disclaimer">These are prototype submission counts, not verified meals delivered or people helped.</p></div></section>
 
 <section class="section about-section" id="about"><div class="container about-grid"><div class="about-copy"><span class="kicker">SDG 02 · United Nations</span><h2>Zero Hunger is about more than food. It is about dignity, opportunity and a sustainable future.</h2><p>Zero Hunger is the second United Nations Sustainable Development Goal. It calls for ending hunger, improving nutrition, ensuring food security and promoting sustainable agriculture.</p><p><strong>Share a Meal</strong> turns that global ambition into a local community concept: helping people offer surplus food, request support and volunteer responsibly.</p><a class="text-link" href="https://sdgs.un.org/goals/goal2" target="_blank" rel="noopener noreferrer">Explore UN Sustainable Development Goal 2 <span aria-hidden="true">↗</span></a></div><div class="about-visual"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85" alt="Sunlit green agricultural fields and crops" loading="lazy"><div class="image-caption"><span class="caption-mark">02</span><span><strong>End hunger. Achieve food security.</strong><small>Build resilient, sustainable food systems.</small></span></div></div></div></section>
 <section class="section causes-section" id="causes"><div class="container"><div class="sectionhead"><span class="kicker">Understand the challenge</span><h2>Why food insecurity happens—and what can help.</h2><p>Hunger is shaped by connected social, economic and environmental factors. Meaningful solutions must address both access to food and the systems that produce it.</p></div><div class="cause-solution-grid"><article class="insight-card"><span class="insight-number">01</span><div class="insight-icon">🌦</div><h3>Climate and crop disruption</h3><p>Droughts, floods and changing weather can damage harvests, disrupt supply and raise food prices.</p><div class="insight-foot">A more resilient food system</div></article><article class="insight-card"><span class="insight-number">02</span><div class="insight-icon">🚚</div><h3>Unequal access and distribution</h3><p>Food may be available in one place while families elsewhere struggle with affordability, transport or access.</p><div class="insight-foot">Fairer access to nutritious food</div></article><article class="insight-card"><span class="insight-number">03</span><div class="insight-icon">♻</div><h3>Food loss and waste</h3><p>Food can be lost during harvesting, storage and transport, or wasted by retailers and households.</p><div class="insight-foot">Prevent waste and share safely</div></article></div><div class="solution-band"><div><span class="kicker">From awareness to action</span><h3>Small community actions can support bigger solutions.</h3><p>Grow sustainably, reduce avoidable waste, strengthen local partnerships and make nutritious food easier to access.</p></div><a class="btn" href="#how">Explore how to take part <span aria-hidden="true">→</span></a></div></div></section>
@@ -528,7 +624,8 @@ bindForm('volunteerForm','volunteer',()=>({name:$('volName').value.trim(),area:$
 $('surveyForm').addEventListener('submit',async event=>{event.preventDefault();const form=event.target,fd=new FormData(form),feedback={waste_rating:fd.get('waste'),desired_feature:$('surveyFeature').value,suggestion:$('surveyImprove').value.trim()},submit=form.querySelector('button[type="submit"]');submit.disabled=true;try{if(BACKEND_ENABLED){await api('feedback',{method:'POST',body:JSON.stringify(feedback)});$('surveyResult').textContent='Thank you! Your feedback has been sent to the project database.';toast('Feedback saved to the shared database.')}else{data.feedback.unshift({id:'FB-'+Date.now().toString(36).toUpperCase(),waste:feedback.waste_rating,feature:feedback.desired_feature,suggestion:feedback.suggestion,createdAt:new Date().toISOString()});persist();$('surveyResult').textContent='Thank you! Your demo feedback has been saved in this browser. Total feedback responses here: '+data.feedback.length+'.';toast('Feedback saved on this device.')} $('surveyResult').classList.add('show');form.reset();render()}catch(error){$('surveyResult').textContent='Feedback could not be saved: '+error.message;$('surveyResult').classList.add('show')}finally{submit.disabled=false}});
 function label(type){return type==='request'?'Food request':type==='donation'?'Food offer':'Volunteer'}
 function icon(type){return type==='request'?'💚':type==='donation'?'🥗':'🙌'}
-function render(){const entries=data.entries;$('requestCount').textContent=entries.filter(x=>x.type==='request').length;$('donationCount').textContent=entries.filter(x=>x.type==='donation').length;$('volunteerCount').textContent=entries.filter(x=>x.type==='volunteer').length;
+function animateImpactCount(id,target){const node=$(id);if(!node)return;const start=Number(node.dataset.value||0);const duration=650;const began=performance.now();const tick=now=>{const p=Math.min(1,(now-began)/duration);const eased=1-Math.pow(1-p,3);node.textContent=String(Math.round(start+(target-start)*eased));if(p<1)requestAnimationFrame(tick);else node.dataset.value=String(target)};requestAnimationFrame(tick)}
+function render(){const entries=data.entries;$('requestCount').textContent=entries.filter(x=>x.type==='request').length;$('donationCount').textContent=entries.filter(x=>x.type==='donation').length;$('volunteerCount').textContent=entries.filter(x=>x.type==='volunteer').length;animateImpactCount('impactRequests',entries.filter(x=>x.type==='request').length);animateImpactCount('impactDonations',entries.filter(x=>x.type==='donation').length);animateImpactCount('impactVolunteers',entries.filter(x=>x.type==='volunteer').length);
 const query=$('boardSearch').value.trim().toLowerCase();const visibleEntries=BACKEND_ENABLED?entries.filter(x=>x.status==='Approved'||x.status==='Completed'||(currentUser&&(x.user_id===currentUser.id||isAdmin))):entries;const shown=visibleEntries.filter(x=>(filter==='all'||x.type===filter)&&JSON.stringify(x.fields).toLowerCase().includes(query));$('entryCount').textContent=shown.length+' entr'+(shown.length===1?'y':'ies')+' shown · '+data.feedback.length+' feedback response'+(data.feedback.length===1?'':'s');
 $('listings').innerHTML=shown.length?shown.map(x=>{const f=x.fields;const detail=x.type==='request'?(f.food+' · '+f.people):x.type==='donation'?(f.food+' · '+f.quantity):(f.role+' · '+f.availability);return '<article class="listing"><div class="listingtop"><span style="font-size:1.35rem">'+icon(x.type)+'</span><span class="pill">'+label(x.type)+'</span></div><h3>'+safeText(f.name||'Community member')+'</h3><p>📍 '+safeText(f.area||'Area not provided')+'</p><p>'+safeText(detail)+'</p><span class="pill">Status: '+safeText(x.status||'Pending')+'</span>'+(x.type==='donation'&&f.notes?'<p>'+safeText(f.notes)+'</p>':'')+'<div class="meta">Demo entry · '+new Date(x.createdAt).toLocaleString()+' · '+safeText(x.id)+'</div><label class="status-label" for="status-'+safeText(x.id)+'">Demo status</label><select class="status-select" id="status-'+safeText(x.id)+'" data-status-entry="'+safeText(x.id)+'"><option'+((x.status||'Pending')==='Pending'?' selected':'')+'>Pending</option><option'+(x.status==='Approved'?' selected':'')+'>Approved</option><option'+(x.status==='Completed'?' selected':'')+'>Completed</option><option'+(x.status==='Rejected'?' selected':'')+'>Rejected</option></select><button class="filter" data-delete-entry="'+safeText(x.id)+'" type="button" style="margin-top:12px;color:#9b2c2c;border-color:#e7caca">Delete entry</button></article>'}).join(''):'<div class="empty"><div style="font-size:2rem">🌱</div><strong>No matching entries yet</strong><p>Try another filter, or add a demo request, food offer or volunteer interest above.</p></div>';
 document.querySelectorAll('.filter').forEach(b=>{b.classList.toggle('active',b.dataset.filter===filter);b.setAttribute('aria-pressed',String(b.dataset.filter===filter))});renderHistory()}
