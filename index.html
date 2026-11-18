@@ -589,7 +589,34 @@ footer a:hover,.footer a:hover{color:#fff}
 @media(prefers-reduced-motion:no-preference){.card,.step,.listing,.btn,.navcta,.brandmark{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease}.card:hover,.step:hover,.listing:hover{transform:translateY(-5px)}}
 @media(max-width:700px){.hero-photo-card{border-radius:19px}.card,.step,.formcard,.stat,.listing{border-radius:15px}}
 
-</style></head>
+</style><style id="final-premium-contrast-fix">
+/* Final override: ensure premium footer contrast and consistent section surfaces */
+html,body{background-color:#f7f4eb!important}
+body{color:#18382c}
+section.section#how{background:linear-gradient(145deg,#f5f2e8,#fbfaf5 55%,#edf2e9)!important}
+section.section#help{background:linear-gradient(125deg,#e9f0e8,#f8f5ec 52%,#f1ead9)!important}
+section.section#donate{background:linear-gradient(145deg,#fbf8ef,#f0eee3 52%,#e8f0e8)!important}
+section.section#volunteer{background:linear-gradient(125deg,#eaf1e9,#f8f5ec 50%,#f4eddd)!important}
+section.section#board{background:linear-gradient(145deg,#f8f5ec,#edf2e9 55%,#f5f0e2)!important}
+section.section#history{background:linear-gradient(125deg,#e9f0e8,#f8f5ec 55%,#f1ead9)!important}
+section.section#survey{background:linear-gradient(145deg,#f7f3e8,#edf2e9 52%,#fbf9f2)!important}
+footer.footer#contact{
+ background:radial-gradient(ellipse at 82% 0%,rgba(201,164,92,.17),transparent 32%),linear-gradient(125deg,#062a21 0%,#0b4936 68%,#103b30 100%)!important;
+ color:#fffdf5!important;
+ border-top:1px solid rgba(201,164,92,.65)!important;
+}
+footer.footer#contact p,
+footer.footer#contact .footbottom,
+footer.footer#contact .footbottom span,
+footer.footer#contact strong{color:#f4f0e5!important;opacity:1!important}
+footer.footer#contact a,
+footer.footer#contact .brand{color:#f0d99e!important;opacity:1!important;text-decoration-color:rgba(240,217,158,.65)}
+footer.footer#contact .brand small{color:#d7e5da!important}
+footer.footer#contact .brandmark{color:#fff!important}
+footer.footer#contact .footbottom{border-top:1px solid rgba(240,217,158,.45)!important}
+footer.footer#contact a:hover{color:#fff!important}
+</style>
+</head>
 <body>
 
 <nav class="nav"><div class="container navinner">
