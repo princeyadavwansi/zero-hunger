@@ -294,6 +294,48 @@ body{background:#fff;color:var(--ink)}.container{width:min(1200px,92%)}
 #admin-dashboard .admin-actions .btn:focus-visible{outline:3px solid #e8bd55;outline-offset:3px}
 @media(max-width:520px){#admin-dashboard .boardtools .actions{width:100%}#admin-dashboard .boardtools .actions .btn{flex:1}}
 
+
+/* Share a Meal — colourful cartoon-inspired site-wide motion */
+:root{--green:#13784d;--green-dark:#0c4d35;--green-soft:#e9f8ed;--gold:#f2bd4b;--coral:#ff8c70;--sky:#eaf5ff;--lavender:#f2edff}
+body{background:linear-gradient(180deg,#fff 0%,#fbfffc 45%,#fffdf8 100%)}
+.topnote{background:linear-gradient(100deg,#0d5138,#16895a,#e2a83d,#16895a);background-size:240% 100%;animation:siteRibbon 14s linear infinite}
+.brandmark{background:linear-gradient(145deg,#168653,#0c4d35);border-radius:14px;animation:brandWiggle 6s ease-in-out infinite}
+.hero{background:radial-gradient(circle at 8% 15%,#e4f8e9 0,transparent 32%),radial-gradient(circle at 90% 85%,#fff0d9 0,transparent 32%),linear-gradient(120deg,#f4fff5,#fff 58%,#fffaf0)}
+.hero h1 em{background:linear-gradient(90deg,#168653,#4baf72,#d79b2e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-photo-card{border:5px solid #fff;box-shadow:0 24px 60px #165a3a25}
+.hero-photo-card:before,.hero-photo-card:after{position:absolute;z-index:3;display:grid;place-items:center;width:58px;height:58px;border-radius:20px;background:#fff;box-shadow:0 10px 24px #102e1d30;font-size:2rem;pointer-events:none}
+.hero-photo-card:before{content:"🥕";top:22%;right:18px;animation:cartoonFloat 4.2s ease-in-out infinite}
+.hero-photo-card:after{content:"🍎";right:26px;bottom:24%;animation:cartoonFloat 5s .7s ease-in-out infinite reverse}
+.sectionhead:after{content:"🥗";display:grid;place-items:center;width:48px;height:48px;margin:18px auto 0;border-radius:17px;background:linear-gradient(145deg,#e4f7e9,#fff1d7);box-shadow:0 8px 20px #155b3915;font-size:1.65rem;animation:cartoonWiggle 5s ease-in-out infinite}
+.card,.step,.stat,.listing,.faq details,.formcard{border-radius:16px}
+.journey .card:nth-child(1){background:linear-gradient(150deg,#fff,#f0fff3)}
+.journey .card:nth-child(2){background:linear-gradient(150deg,#fff,#fff8e9)}
+.journey .card:nth-child(3){background:linear-gradient(150deg,#fff,#f1f7ff)}
+.cardicon{border-radius:16px;background:linear-gradient(145deg,#e3f8e9,#fff0d5);animation:iconBob 4s ease-in-out infinite}
+.journey .card:nth-child(2) .cardicon{animation-delay:.5s}.journey .card:nth-child(3) .cardicon{animation-delay:1s}
+.btn{border-radius:999px;background:linear-gradient(110deg,#11613f,#1b9661);box-shadow:0 9px 20px #17634425}
+.btn:hover{box-shadow:0 14px 28px #17634435;transform:translateY(-3px) scale(1.015)}
+.btn.secondary{background:#fff;color:#146342;border-color:#b9d8c4}
+.section.soft{background:linear-gradient(180deg,#f5fbf6,#f8fbff)}
+.rescue-card.waste{background:linear-gradient(145deg,#fff1e6,#fff9ef)}
+.rescue-card.share{background:linear-gradient(145deg,#e7f8e9,#f3fff6)}
+.rescue-emoji{display:inline-block;animation:cartoonFloat 4s ease-in-out infinite}
+.impact-showcase,.impactbox{background:radial-gradient(circle at 15% 15%,#267d57 0,transparent 35%),linear-gradient(125deg,#0b4932,#13794f 70%,#205d9a)}
+.impact-metric{border-radius:18px;background:linear-gradient(145deg,#ffffff20,#ffffff0b)}
+.story-card{border-radius:18px;background:linear-gradient(145deg,#fff,#f5fbf6)}
+.mission-banner{border-radius:20px;background:linear-gradient(110deg,#e8f8ec,#fff6e3 55%,#edf5ff)}
+.footer{background:linear-gradient(120deg,#0b3828,#104f37 65%,#174b45)}
+.floating-mission{background:linear-gradient(110deg,#14633f,#239664);animation:floatCta 4s ease-in-out infinite}
+@keyframes siteRibbon{to{background-position:240% 0}}
+@keyframes cartoonFloat{0%,100%{transform:translateY(0) rotate(-7deg)}50%{transform:translateY(-13px) rotate(7deg)}}
+@keyframes cartoonWiggle{0%,82%,100%{transform:rotate(0) scale(1)}87%{transform:rotate(-10deg) scale(1.08)}92%{transform:rotate(10deg) scale(1.08)}}
+@keyframes iconBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes brandWiggle{0%,90%,100%{transform:rotate(0)}94%{transform:rotate(-7deg)}97%{transform:rotate(7deg)}}
+@keyframes floatCta{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media(hover:hover){.card:hover .cardicon{transform:translateY(-5px) rotate(-7deg) scale(1.08);transition:transform .3s ease}.rescue-card:hover .rescue-emoji{animation-play-state:paused;transform:scale(1.15) rotate(8deg)}}
+@media(max-width:700px){.hero-photo-card:before,.hero-photo-card:after{width:46px;height:46px;font-size:1.55rem}.sectionhead:after{width:42px;height:42px}}
+@media(prefers-reduced-motion:reduce){.topnote,.brandmark,.hero-photo-card:before,.hero-photo-card:after,.sectionhead:after,.cardicon,.rescue-emoji,.floating-mission{animation:none!important}}
+
 </style></head>
 <body>
 
